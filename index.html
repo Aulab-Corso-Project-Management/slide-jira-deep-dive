@@ -1,0 +1,1330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jira Presentation — Aulab System</title>
+
+  <!-- Reveal.js core -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+  <!-- Tailwind CSS v4 via CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style type="text/tailwindcss">
+    @theme {
+      --color-aulab-yellow: #ffed00;
+      --color-aulab-cyan: #38bdf8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ═══════════════════════════════════════════════
+           INTRODUZIONE (Welcome + Agenda)
+      ═══════════════════════════════════════════════ -->
+      <section>
+
+        <!-- SLIDE DI BENVENUTO -->
+        <section class="section-divider" data-state="is-section-divider">
+          <div class="flex flex-col items-center justify-center gap-10 text-center max-w-4xl mx-auto">
+
+            <div class="flex items-center gap-4">
+              <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+              <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow">Aulab Masterclass</span>
+              <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+            </div>
+
+            <div style="filter: drop-shadow(0 0 60px rgba(38,132,255,0.4));">
+              <img src="media/jira-logo.png" alt="Jira" style="width: 140px; height: 140px; object-fit: contain;">
+            </div>
+
+            <div class="space-y-2">
+              <h1 class="text-[8rem] font-black tracking-[-0.05em] text-white leading-none uppercase">Deep Dive</h1>
+              <h1 class="text-[8rem] font-black tracking-[-0.05em] text-white leading-none uppercase">su Jira Cloud</h1>
+            </div>
+
+            <div class="w-24 h-px bg-white/20"></div>
+
+            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">
+              Gestione avanzata del lavoro e dei processi Agile
+            </p>
+          </div>
+        </section>
+
+
+        <!-- AGENDA -->
+        <section id="slide-agenda">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">Contenuti della lezione</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Agenda 2025</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-8 w-full">
+                <div class="col-span-12 glass-card border-aulab-yellow/10">
+                  <div class="grid grid-cols-2 gap-x-16 gap-y-8">
+
+                    <div class="flex items-center gap-6 group">
+                      <div class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
+                        <span class="text-xl font-black text-aulab-yellow">01</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-xl font-bold text-white uppercase tracking-tight">Filosofia e Fondamenta</span>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-6 group">
+                      <div class="w-14 h-14 rounded-2xl bg-aulab-cyan/5 flex items-center justify-center border border-aulab-cyan/10 group-hover:border-aulab-cyan/40 transition-all duration-500 shrink-0">
+                        <span class="text-xl font-black text-aulab-cyan">02</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-xl font-bold text-white uppercase tracking-tight">Setup e Struttura Progetti</span>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-6 group">
+                      <div class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
+                        <span class="text-xl font-black text-aulab-yellow">03</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-xl font-bold text-white uppercase tracking-tight">Schemi e Workflow Advanced</span>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-6 group">
+                      <div class="w-14 h-14 rounded-2xl bg-aulab-cyan/5 flex items-center justify-center border border-aulab-cyan/10 group-hover:border-aulab-cyan/40 transition-all duration-500 shrink-0">
+                        <span class="text-xl font-black text-aulab-cyan">04</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-xl font-bold text-white uppercase tracking-tight">Gerarchia e Issue Types</span>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-6 group">
+                      <div class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
+                        <span class="text-xl font-black text-aulab-yellow">05</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-xl font-bold text-white uppercase tracking-tight">Metodologie e Metriche</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════
+           CAPITOLO 01: FONDAMENTA E FILOSOFIA
+      ═══════════════════════════════════════════════ -->
+      <section>
+
+        <!-- Cap 01: Section Divider -->
+        <section class="section-divider" data-state="is-section-divider">
+          <div class="flex flex-col items-center justify-center gap-8 text-center max-w-4xl mx-auto">
+            <div class="flex items-center gap-4">
+              <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+              <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow">Capitolo 01</span>
+              <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(255,237,0,0.12)] border-aulab-yellow/20">
+              <i class="fa-solid fa-rocket text-6xl text-aulab-yellow"></i>
+            </div>
+            <div class="space-y-2">
+              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">Jira</h1>
+              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Filosofia</h1>
+            </div>
+            <div class="w-24 h-px bg-white/20"></div>
+            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">Primi passi e gestione dello spazio di lavoro</p>
+          </div>
+        </section>
+
+
+        <!-- Slide 01.01: Cos'è Jira -->
+        <section id="slide-01-01">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.01 &mdash; Cos&apos;&egrave; Jira</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Overview</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+
+                <div class="col-span-8 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <i class="fa-solid fa-bullseye text-aulab-yellow text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase tracking-tight">Piattaforma di Project Tracking</h3>
+                  </div>
+                  <p class="text-gray-400 leading-relaxed">
+                    Jira è lo strumento che permette a team e organizzazioni di <strong class="text-white">pianificare, tracciare e consegnare lavoro</strong> in modo strutturato e visibile da tutti.
+                  </p>
+                  <ul>
+                    <li>Centralizza task, bug, storie e obiettivi in un unico posto</li>
+                    <li>Sostituisce fogli Excel, catene di email e Post-it fisici</li>
+                    <li>Visibilità in tempo reale su chi fa cosa, e quando</li>
+                    <li>Adottato da PM, Dev, Operations, Design, Marketing&hellip;</li>
+                  </ul>
+                </div>
+
+                <div class="col-span-4 flex flex-col gap-5">
+                  <div class="glass-card flex-1 flex flex-col justify-center items-center gap-3 text-center">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
+                      <i class="fa-solid fa-building text-aulab-yellow text-lg"></i>
+                    </div>
+                    <p class="text-3xl font-black text-white">2002</p>
+                    <p class="text-gray-400" style="font-size: 10pt;">Creato da Atlassian, Australia</p>
+                  </div>
+                  <div class="glass-card flex-1 flex flex-col justify-center items-center gap-3 text-center">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
+                      <i class="fa-solid fa-users text-aulab-cyan text-lg"></i>
+                    </div>
+                    <p class="text-3xl font-black text-white">300K+</p>
+                    <p class="text-gray-400" style="font-size: 10pt;">organizzazioni nel mondo</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 01.02: Cosa Jira NON è -->
+        <section id="slide-01-02">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.02 &mdash; Miti da sfatare</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Philosophy</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+                <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/50">
+                  <div class="grid grid-cols-2 gap-10">
+                    <ul class="space-y-6">
+                      <li class="flex flex-col gap-1 group">
+                        <strong class="text-white group-hover:text-aulab-yellow transition-colors">Non è Micromanagement</strong>
+                        <span class="text-gray-400">Non serve a spiare ogni singolo movimento del team.</span>
+                      </li>
+                      <li class="flex flex-col gap-1 group">
+                        <strong class="text-white group-hover:text-aulab-yellow transition-colors">Non è Agile Automatico</strong>
+                        <span class="text-gray-400">Usare Jira non significa "fare agile" senza un processo mentale.</span>
+                      </li>
+                    </ul>
+                    <ul class="space-y-6">
+                      <li class="flex flex-col gap-1 group">
+                        <strong class="text-white group-hover:text-aulab-yellow transition-colors">Non è Magia</strong>
+                        <span class="text-gray-400">Non corregge automaticamente i problemi organizzativi analogici.</span>
+                      </li>
+                      <li class="flex flex-col gap-1 group">
+                        <strong class="text-white group-hover:text-aulab-yellow transition-colors">Niente Controllo Rigido</strong>
+                        <span class="text-gray-400">Il focus deve rimanere sulla fiducia e sui risultati, non sul tempo speso.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 01.03: Garante del Processo -->
+        <section id="slide-01-03">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.03 &mdash; Il Garante del Processo</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Management</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+
+                <!-- Card principale sinistra -->
+                <div class="col-span-7 glass-card border-l-4 border-aulab-cyan/50 flex flex-col gap-5">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <i class="fa-solid fa-trash-can-arrow-up text-aulab-yellow text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase tracking-tight">Garbage In &rArr; Garbage Out</h3>
+                  </div>
+                  <p class="text-gray-400 leading-relaxed">
+                    Uno strumento è utile solo quanto i processi che implementa. Se il processo "analogico" ha lacune, Jira non le risolverà da solo.
+                  </p>
+                  <ul>
+                    <li>Modellazione del flusso di lavoro personalizzato.</li>
+                    <li>Creazione di "Guardrail" per il team.</li>
+                    <li>Responsabilità del processo in mano al management.</li>
+                  </ul>
+                </div>
+
+                <!-- Mini card destra -->
+                <div class="col-span-5 flex flex-col gap-5">
+                  <div class="glass-card flex-1 flex flex-col items-center justify-center text-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
+                      <i class="fa-solid fa-shield-halved text-aulab-cyan text-lg"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-white">Protezione</h4>
+                      <p>Lo strumento protegge il flusso di lavoro dai disordini.</p>
+                    </div>
+                  </div>
+                  <div class="glass-card flex-1 flex flex-col items-center justify-center text-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
+                      <i class="fa-solid fa-route text-aulab-yellow text-lg"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-white">Direzione</h4>
+                      <p>I guardrail assicurano che il lavoro prosegua sui binari corretti.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 01.04: Il DNA Agile -->
+        <section id="slide-01-04">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.04 &mdash; Il DNA Agile</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Methodology</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+
+                <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/30 flex flex-col gap-2">
+                  <p class="text-gray-400">Jira è costruito attorno ai principi del <strong class="text-white">Manifesto Agile (2001)</strong>. Non impone una metodologia: <strong class="text-white">la sceglie il team</strong>. Supporta nativamente due approcci principali:</p>
+                </div>
+
+                <div class="col-span-6 glass-card flex flex-col gap-4">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <i class="fa-solid fa-arrows-rotate text-aulab-yellow text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase tracking-tight">Scrum</h3>
+                  </div>
+                  <ul style="font-size: 0.8rem;">
+                    <li>Lavoro in <strong class="text-white">Sprint</strong> (cicli da 1&ndash;4 settimane)</li>
+                    <li>Backlog con priorità definite dal Product Owner</li>
+                    <li>Cerimonie: Planning, Daily, Review, Retrospective</li>
+                    <li>Ideale per: sviluppo prodotto, scope evolutivo</li>
+                  </ul>
+                </div>
+
+                <div class="col-span-6 glass-card flex flex-col gap-4 border-l-4 border-aulab-cyan/30">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                      <i class="fa-solid fa-table-columns text-aulab-cyan text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase tracking-tight">Kanban</h3>
+                  </div>
+                  <ul style="font-size: 0.8rem;">
+                    <li>Flusso <strong class="text-white">continuo</strong>, senza sprint fissi</li>
+                    <li>WIP Limits per evitare colli di bottiglia</li>
+                    <li>Focus sulla velocità di completamento singola</li>
+                    <li>Ideale per: support, operations, manutenzione</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 01.05: Il Modello Mentale -->
+        <section id="slide-01-05">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.05 &mdash; Il Modello Mentale</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Structure</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+
+                <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/30 flex items-center justify-center gap-6">
+                  <div class="flex flex-col items-center gap-3 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/30">
+                      <i class="fa-solid fa-folder-open text-aulab-yellow text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="text-white font-black uppercase tracking-tight">Spazio</p>
+                      <p class="text-gray-500" style="font-size: 9pt;">Progetto / Team</p>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-chevron-right text-white/20 text-2xl shrink-0"></i>
+                  <div class="flex flex-col items-center gap-3 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10">
+                      <i class="fa-solid fa-table-columns text-white/60 text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="text-white font-black uppercase tracking-tight">Board</p>
+                      <p class="text-gray-500" style="font-size: 9pt;">Scrum / Kanban</p>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-chevron-right text-white/20 text-2xl shrink-0"></i>
+                  <div class="flex flex-col items-center gap-3 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
+                      <i class="fa-solid fa-list-check text-aulab-cyan text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="text-white font-black uppercase tracking-tight">Work Items</p>
+                      <p class="text-gray-500" style="font-size: 9pt;">Epic &rarr; Story &rarr; Task</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-span-4 glass-card flex flex-col gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <i class="fa-solid fa-folder-open text-aulab-yellow text-lg"></i>
+                    </div>
+                    <h4 class="text-white font-black uppercase">Spazio</h4>
+                  </div>
+                  <p class="text-gray-400" style="font-size: 0.8rem;">Il contenitore del lavoro. Ogni team o progetto ha il suo Spazio, con nome, chiave univoca (es. <strong class="text-white">PM-</strong>) e board dedicate.</p>
+                </div>
+
+                <div class="col-span-4 glass-card flex flex-col gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
+                      <i class="fa-solid fa-table-columns text-white/60 text-lg"></i>
+                    </div>
+                    <h4 class="text-white font-black uppercase">Board</h4>
+                  </div>
+                  <p class="text-gray-400" style="font-size: 0.8rem;">Come il lavoro viene visualizzato. Uno spazio può avere più board: Scrum per gli sprint, Kanban per il flusso continuo.</p>
+                </div>
+
+                <div class="col-span-4 glass-card flex flex-col gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                      <i class="fa-solid fa-list-check text-aulab-cyan text-lg"></i>
+                    </div>
+                    <h4 class="text-white font-black uppercase">Work Items</h4>
+                  </div>
+                  <p class="text-gray-400" style="font-size: 0.8rem;">Le unità di lavoro, in gerarchia: <strong class="text-purple-400">Epic</strong> &rarr; <strong class="text-green-400">Story</strong> &rarr; <strong class="text-blue-400">Task</strong> &rarr; Sub-task.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 01.06: Terminologia -->
+        <section id="slide-01-06">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.06 &mdash; Evoluzione Terminologica</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Vocabulary</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full" style="height: 340px;">
+
+                <div class="col-span-5 glass-card flex flex-col items-center justify-center text-center gap-4">
+                  <span class="text-[0.6rem] font-bold uppercase tracking-[0.2rem] text-gray-500">Ieri</span>
+                  <h3 class="text-4xl font-black text-gray-400 italic">ISSUE</h3>
+                  <p class="text-xs uppercase tracking-widest">Problema / Ticket</p>
+                  <div class="w-12 h-px bg-white/10"></div>
+                  <p class="text-gray-500 italic" style="font-size: 10pt;">Eredità del Bug Tracking classico.</p>
+                </div>
+
+                <div class="col-span-2 flex items-center justify-center">
+                  <i class="fa-solid fa-arrow-right text-4xl text-aulab-yellow opacity-50"></i>
+                </div>
+
+                <div class="col-span-5 glass-card flex flex-col items-center justify-center text-center gap-4 border-aulab-yellow/30">
+                  <span class="text-[0.6rem] font-bold uppercase tracking-[0.2rem] text-aulab-yellow/60">Oggi</span>
+                  <h3 class="text-4xl font-black text-gradient italic">WORK ITEM</h3>
+                  <p class="text-xs uppercase tracking-widest">Unità di lavoro</p>
+                  <div class="w-12 h-px bg-aulab-yellow/20"></div>
+                  <p class="text-gray-400 italic" style="font-size: 10pt;">Concetto universale per ogni tipo di attività.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════
+           CAPITOLO 02: CONFIGURAZIONE E TIPOLOGIE
+      ═══════════════════════════════════════════════ -->
+      <section>
+
+        <!-- Cap 02: Section Divider -->
+        <section class="section-divider" data-state="is-section-divider">
+          <div class="flex flex-col items-center justify-center gap-8 text-center max-w-4xl mx-auto">
+            <div class="flex items-center gap-4">
+              <span class="block w-12 h-px bg-aulab-cyan/40"></span>
+              <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-cyan">Capitolo 02</span>
+              <span class="block w-12 h-px bg-aulab-cyan/40"></span>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(56,189,248,0.12)] border-aulab-cyan/20">
+              <i class="fa-solid fa-gears text-6xl text-aulab-cyan"></i>
+            </div>
+            <div class="space-y-2">
+              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">Setup</h1>
+              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Struttura</h1>
+            </div>
+            <div class="w-24 h-px bg-white/20"></div>
+            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">Dall'anatomia dello spazio alle tipologie di progetto</p>
+          </div>
+        </section>
+
+
+        <!-- Slide 02.01: Anatomia -->
+        <section id="slide-02-01">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-cyan"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">02.01 &mdash; Anatomia del Progetto</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Architecture</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+
+                <div class="col-span-12 glass-card border-l-4 border-aulab-cyan/50">
+                  <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4">
+                      <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                        <i class="fa-solid fa-cube text-aulab-cyan text-lg"></i>
+                      </div>
+                      <h3 class="text-xl font-black uppercase tracking-tight">Lo Spazio (Space)</h3>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                      L'unità fondamentale che contiene il lavoro. Caratterizzato da un <strong class="text-white">Nome</strong> e una <strong class="text-white">Chiave (Key)</strong> che genera prefissi (es. PM-1).
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-span-6 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-3">
+                  <h4 class="text-white">Template</h4>
+                  <p>Software Development, Kanban, Scrum, Bug Tracking, Roadmap.</p>
+                </div>
+
+                <div class="col-span-6 glass-card border-l-4 border-white/20 flex flex-col gap-3">
+                  <h4 class="text-white">Board</h4>
+                  <p>Lo strumento di interazione (Scrum o Kanban). Possiamo averne N per spazio.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 02.02: Team Managed -->
+        <section id="slide-02-02">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-cyan"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">02.02 &mdash; Team-Managed</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Structure</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+                <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-2">
+                  <h3 class="text-xl font-black uppercase tracking-tight">La "Bolla" di Autonomia</h3>
+                  <p class="text-gray-400">Ideale per team indipendenti che necessitano di rapidità.</p>
+                </div>
+                <div class="col-span-4 glass-card flex flex-col items-center text-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
+                    <i class="fa-solid fa-bolt text-aulab-yellow text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white">Setup Rapido</h4>
+                    <p style="font-size: 10pt;">Configurazione semplificata gestita dal Team Leader.</p>
+                  </div>
+                </div>
+                <div class="col-span-4 glass-card flex flex-col items-center text-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
+                    <i class="fa-solid fa-lock text-aulab-yellow text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white">Isolamento</h4>
+                    <p style="font-size: 10pt;">Non condivide schemi o impostazioni con altri progetti.</p>
+                  </div>
+                </div>
+                <div class="col-span-4 glass-card flex flex-col items-center text-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
+                    <i class="fa-solid fa-user-shield text-aulab-yellow text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white">No Admin Role</h4>
+                    <p style="font-size: 10pt;">Non richiede l'intervento di un Jira Admin centrale.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 02.03: Company Managed -->
+        <section id="slide-02-03">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-cyan"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">02.03 &mdash; Company-Managed</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Enterprise</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+                <div class="col-span-12 glass-card border-l-4 border-aulab-cyan/50 flex flex-col gap-2">
+                  <h3 class="text-xl font-black uppercase tracking-tight">Controllo Enterprise</h3>
+                  <p class="text-gray-400">Ideale per standardizzazione cross-progetto e processi complessi.</p>
+                </div>
+                <div class="col-span-4 glass-card flex flex-col items-center text-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
+                    <i class="fa-solid fa-network-wired text-aulab-cyan text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white">Schemi Condivisi</h4>
+                    <p style="font-size: 10pt;">Condivide Workflow, Campi e Permessi tra più progetti.</p>
+                  </div>
+                </div>
+                <div class="col-span-4 glass-card flex flex-col items-center text-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
+                    <i class="fa-solid fa-code-merge text-aulab-cyan text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white">Relazioni</h4>
+                    <p style="font-size: 10pt;">Permette logiche cross-progetto e visibilità centralizzata.</p>
+                  </div>
+                </div>
+                <div class="col-span-4 glass-card flex flex-col items-center text-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
+                    <i class="fa-solid fa-chess-king text-aulab-cyan text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white">Jira Admin</h4>
+                    <p style="font-size: 10pt;">La configurazione avanzata richiede permessi amministrativi.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 02.04: Team vs Company — Come Scegliere -->
+        <section id="slide-02-04">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-cyan"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">02.04 &mdash; Quale Tipologia: Come Scegliere</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Decision</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+
+                <div class="col-span-6 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-4">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <i class="fa-solid fa-bolt text-aulab-yellow text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase tracking-tight">Team-Managed</h3>
+                  </div>
+                  <ul style="font-size: 0.8rem;">
+                    <li>Setup immediato, senza admin Jira</li>
+                    <li>Configurazione isolata — non condivide schemi</li>
+                    <li>Workflow e campi personalizzabili dal team leader</li>
+                    <li><strong class="text-white">Ideale per:</strong> PMI, startup, nuovi team, progetti pilota</li>
+                  </ul>
+                </div>
+
+                <div class="col-span-6 glass-card border-l-4 border-aulab-cyan/50 flex flex-col gap-4">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                      <i class="fa-solid fa-chess-king text-aulab-cyan text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase tracking-tight">Company-Managed</h3>
+                  </div>
+                  <ul style="font-size: 0.8rem;">
+                    <li>Richiede un Jira Admin per la configurazione</li>
+                    <li>Schemi condivisi tra N progetti — coerenza totale</li>
+                    <li>Permessi granulari, audit, integrazioni avanzate</li>
+                    <li><strong class="text-white">Ideale per:</strong> enterprise, 10+ team, compliance, audit</li>
+                  </ul>
+                </div>
+
+                <div class="col-span-12 glass-card border border-aulab-cyan/20 bg-aulab-cyan/5 flex items-center gap-5">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                    <i class="fa-solid fa-scale-balanced text-aulab-cyan text-lg"></i>
+                  </div>
+                  <p class="text-gray-300" style="font-size: 0.85rem;">
+                    <strong class="text-white">Regola pratica:</strong> se stai configurando un solo progetto o esplorando Jira → Team-Managed. Se gestisci processi condivisi tra più team in un'organizzazione → Company-Managed.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 02.05: I Template Disponibili -->
+        <section id="slide-02-05">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-cyan"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">02.05 &mdash; I Template Disponibili</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Templates</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+
+                <div class="col-span-12 glass-card border-l-4 border-aulab-cyan/30 flex flex-col gap-2">
+                  <p class="text-gray-400">Alla creazione di un progetto Jira chiede di scegliere un <strong class="text-white">template</strong>: un punto di partenza che preconfiguriamo workflow, board e strumenti. Si può sempre personalizzare in seguito.</p>
+                </div>
+
+                <div class="col-span-3 glass-card flex flex-col items-center gap-3 text-center">
+                  <div class="w-12 h-12 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
+                    <i class="fa-solid fa-arrows-rotate text-aulab-yellow text-lg"></i>
+                  </div>
+                  <h4 class="text-white font-black uppercase" style="font-size: 0.82rem;">Scrum</h4>
+                  <p class="text-gray-500" style="font-size: 9pt;">Sprint, Backlog, Velocity. Per team con cicli iterativi e cerimonie Agile.</p>
+                </div>
+
+                <div class="col-span-3 glass-card flex flex-col items-center gap-3 text-center">
+                  <div class="w-12 h-12 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
+                    <i class="fa-solid fa-table-columns text-aulab-cyan text-lg"></i>
+                  </div>
+                  <h4 class="text-white font-black uppercase" style="font-size: 0.82rem;">Kanban</h4>
+                  <p class="text-gray-500" style="font-size: 9pt;">Flusso continuo, WIP Limits. Per team in modalità always-on senza sprint.</p>
+                </div>
+
+                <div class="col-span-3 glass-card flex flex-col items-center gap-3 text-center">
+                  <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20">
+                    <i class="fa-solid fa-bug text-red-400 text-lg"></i>
+                  </div>
+                  <h4 class="text-white font-black uppercase" style="font-size: 0.82rem;">Bug Tracking</h4>
+                  <p class="text-gray-500" style="font-size: 9pt;">Ottimizzato per segnalazioni, triage e risoluzione di difetti software.</p>
+                </div>
+
+                <div class="col-span-3 glass-card flex flex-col items-center gap-3 text-center">
+                  <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
+                    <i class="fa-solid fa-map text-purple-400 text-lg"></i>
+                  </div>
+                  <h4 class="text-white font-black uppercase" style="font-size: 0.82rem;">Roadmap</h4>
+                  <p class="text-gray-500" style="font-size: 9pt;">Pianificazione visiva di obiettivi e milestone. Per team non-dev o di product.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════
+           CAPITOLO 03: GLI SCHEMI (LA SPINA DORSALE)
+      ═══════════════════════════════════════════════ -->
+      <section>
+
+        <!-- Cap 03: Section Divider -->
+        <section class="section-divider" data-state="is-section-divider">
+          <div class="flex flex-col items-center justify-center gap-8 text-center max-w-4xl mx-auto">
+            <div class="flex items-center gap-4">
+              <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+              <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow">Capitolo 03</span>
+              <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(255,237,0,0.12)] border-aulab-yellow/20">
+              <i class="fa-solid fa-sitemap text-6xl text-aulab-yellow"></i>
+            </div>
+            <div class="space-y-2">
+              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">Gli</h1>
+              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Schemi</h1>
+            </div>
+            <div class="w-24 h-px bg-white/20"></div>
+            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">Configurazione centralizzata e modelli riutilizzabili</p>
+          </div>
+        </section>
+
+
+        <!-- Slide 03.01: Concetto di Schema -->
+        <section id="slide-03-01">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">03.01 &mdash; Il Concetto di Schema</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Configuration</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+                <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <i class="fa-solid fa-layer-group text-aulab-yellow text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase tracking-tight">Eredità e Centralizzazione</h3>
+                  </div>
+                  <p class="text-gray-400">Uno schema è un raccoglitore di impostazioni che può essere applicato a N progetti contemporaneamente.</p>
+                  <div class="grid grid-cols-2 gap-8">
+                    <div class="rounded-xl bg-white/[0.02] border border-white/5 flex flex-col gap-3" style="padding: 1rem;">
+                      <h4 class="text-white" style="font-size: 0.875rem; margin: 0 !important;">Vantaggi</h4>
+                      <ul style="font-size: 0.75rem;">
+                        <li>Standardizzazione aziendale.</li>
+                        <li>Aggiornamento massivo in un solo click.</li>
+                        <li>Coerenza dei dati tra team diversi.</li>
+                      </ul>
+                    </div>
+                    <div class="rounded-xl bg-aulab-yellow/5 border border-aulab-yellow/20 flex flex-col gap-3" style="padding: 1rem;">
+                      <h4 class="text-aulab-yellow" style="font-size: 0.875rem; margin: 0 !important;">⚠️ Attenzione</h4>
+                      <p class="text-gray-300 leading-tight" style="font-size: 10pt;">
+                        Modificare uno schema condiviso impatta tutti i progetti collegati. Rischio di "effetti collaterali" involontari.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 03.02: Workflow -->
+        <section id="slide-03-02">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">03.02 &mdash; Workflow e Ciclo di Vita</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Process Flow</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-2 gap-6 w-full">
+
+                <div class="glass-card flex flex-col gap-5">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
+                    <i class="fa-solid fa-diagram-project text-aulab-cyan text-lg"></i>
+                  </div>
+                  <h3 class="text-xl font-black uppercase">Stati e Percorsi</h3>
+                  <p class="text-gray-400">
+                    Modellano il flusso di lavoro dalla creazione alla chiusura (<strong class="text-white italic">Definition of Done</strong>).
+                  </p>
+                  <ul style="font-size: 0.75rem;">
+                    <li><strong class="text-white">Stati (Status)</strong>: Le tappe (To Do, In Progress, Done).</li>
+                    <li><strong class="text-white">Transizioni</strong>: Le frecce che permettono lo spostamento.</li>
+                  </ul>
+                </div>
+
+                <div class="glass-card flex flex-col gap-5 border-l-4 border-aulab-cyan/30">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
+                    <i class="fa-solid fa-shield-halved text-aulab-yellow text-lg"></i>
+                  </div>
+                  <h3 class="text-xl font-black uppercase">Restrizioni e Regole</h3>
+                  <p class="text-gray-400">
+                    Sano <strong class="text-white">enforcing del processo</strong>.
+                  </p>
+                  <ul style="font-size: 0.75rem;">
+                    <li>Disabilitare transizioni illegali (es. da To Do a Done).</li>
+                    <li>Richiedere input obbligatori durante il cambio di stato.</li>
+                    <li>Limitare azioni a specifici ruoli (es. solo QA può validare).</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 03.03: Screens & Fields -->
+        <section id="slide-03-03">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">03.03 &mdash; Screens &amp; Fields</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Data Views</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+                <div class="col-span-12 glass-card border-l-4 border-aulab-cyan/50 flex flex-col gap-5">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                      <i class="fa-solid fa-table-columns text-aulab-cyan text-lg"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-black uppercase tracking-tight">Visualizzazione del dato</h3>
+                      <p class="text-gray-400 leading-relaxed">
+                        Determina quali informazioni mostrare all'utente in base al tipo di attività e alla fase del ciclo di vita.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-3 gap-6">
+                    <div class="text-center flex flex-col gap-2">
+                      <div class="text-[1.5rem] font-black text-aulab-yellow italic tracking-tighter">Creazione</div>
+                      <p style="font-size: 10pt;" class="text-gray-500 uppercase">Input iniziali</p>
+                    </div>
+                    <div class="text-center flex flex-col gap-2">
+                      <div class="text-[1.5rem] font-black text-gradient italic tracking-tighter">Visualizzazione</div>
+                      <p style="font-size: 10pt;" class="text-gray-500 uppercase">Dettagli del lavoro</p>
+                    </div>
+                    <div class="text-center flex flex-col gap-2">
+                      <div class="text-[1.5rem] font-black text-aulab-cyan italic tracking-tighter">Edit</div>
+                      <p style="font-size: 10pt;" class="text-gray-500 uppercase">Aggiornamento campi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════
+           CAPITOLO 04: GERARCHIA ED ISSUE TYPES
+      ═══════════════════════════════════════════════ -->
+      <section>
+
+        <!-- Cap 04: Section Divider -->
+        <section class="section-divider" data-state="is-section-divider">
+          <div class="flex flex-col items-center justify-center gap-8 text-center max-w-4xl mx-auto">
+            <div class="flex items-center gap-4">
+              <span class="block w-12 h-px bg-aulab-cyan/40"></span>
+              <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-cyan">Capitolo 04</span>
+              <span class="block w-12 h-px bg-aulab-cyan/40"></span>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(56,189,248,0.12)] border-aulab-cyan/20">
+              <i class="fa-solid fa-layer-group text-6xl text-aulab-cyan"></i>
+            </div>
+            <div class="space-y-2">
+              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">Gerarchia</h1>
+              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Issues</h1>
+            </div>
+            <div class="w-24 h-px bg-white/20"></div>
+            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">Organizzare il lavoro dal macro al micro</p>
+          </div>
+        </section>
+
+
+        <!-- Slide 04.01: La Piramide -->
+        <section id="slide-04-01">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-cyan"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">04.01 &mdash; La Piramide del Lavoro</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Hierarchy</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+                <div class="col-span-12 glass-card border-l-4 border-aulab-cyan/50">
+                  <div class="grid grid-cols-3 gap-8">
+
+                    <div class="flex flex-col items-center text-center gap-4" style="padding: 1rem;">
+                      <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center border border-purple-500/30">
+                        <i class="fa-solid fa-bolt text-purple-400"></i>
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <h4 class="text-white uppercase">Epic</h4>
+                        <p class="text-gray-400 italic" style="font-size: 9pt;">"Voglio un e-commerce"</p>
+                        <p class="text-gray-500" style="font-size: 8pt;">Grandi blocchi di lavoro che richiedono più sprint.</p>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center gap-4 border-x border-white/5" style="padding: 1rem;">
+                      <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/30">
+                        <i class="fa-solid fa-file-lines text-blue-400"></i>
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <h4 class="text-white uppercase">Story / Task</h4>
+                        <p class="text-gray-400 italic" style="font-size: 9pt;">"Aggiungere prodotti al carrello"</p>
+                        <p class="text-gray-500" style="font-size: 8pt;">Unità di valore o lavoro tecnico completabile in uno sprint.</p>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center gap-4" style="padding: 1rem;">
+                      <div class="w-12 h-12 rounded-full bg-gray-500/20 flex items-center justify-center border border-gray-500/30">
+                        <i class="fa-solid fa-list-check text-gray-400"></i>
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <h4 class="text-white uppercase">Sub-task</h4>
+                        <p class="text-gray-400 italic" style="font-size: 9pt;">"Creare tabella DB"</p>
+                        <p class="text-gray-500" style="font-size: 8pt;">Scomposizione tecnica per un singolo membro del team.</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 04.02: User Story -->
+        <section id="slide-04-02">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-cyan"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">04.02 &mdash; User Story</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Requirements</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+
+                <div class="col-span-8 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <i class="fa-solid fa-user text-aulab-yellow text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase">Il formato standard</h3>
+                  </div>
+                  <div class="flex flex-col gap-5">
+                    <div class="flex gap-4 items-start">
+                      <span class="text-aulab-yellow font-black shrink-0">As a:</span>
+                      <p class="text-gray-300">Come [Utente / Persona]</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                      <span class="text-aulab-yellow font-black shrink-0">I want to:</span>
+                      <p class="text-gray-300">Desidero [Azione / Funzionalità]</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                      <span class="text-aulab-yellow font-black shrink-0">So that:</span>
+                      <p class="text-gray-300">In modo da [Valore / Beneficio]</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-span-4 glass-card border-aulab-cyan/30 flex flex-col justify-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
+                    <i class="fa-solid fa-check-double text-aulab-cyan text-lg"></i>
+                  </div>
+                  <h4 class="text-white">Acceptance Criteria</h4>
+                  <p class="text-gray-400 leading-relaxed italic border-l border-white/10" style="padding-left: 1rem; font-size: 10pt;">
+                    La lista di condizioni che devono essere soddisfatte perché la story sia considerata "Done".
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 04.03: Bug Tracking -->
+        <section id="slide-04-03">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-cyan"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">04.03 &mdash; Bug Tracking</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Quality Control</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+
+                <div class="col-span-6 glass-card border-l-4 border-red-500/50 flex flex-col gap-4">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20 shrink-0">
+                      <i class="fa-solid fa-bug text-red-400 text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase text-red-100">Cos'è un Bug?</h3>
+                  </div>
+                  <p class="text-gray-400">
+                    Un'anomalia rispetto al comportamento atteso. Non è una nuova funzionalità, ma un errore da correggere.
+                  </p>
+                </div>
+
+                <div class="col-span-6 glass-card border-l-4 border-aulab-cyan/50 flex flex-col gap-4">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                      <i class="fa-solid fa-list-check text-aulab-cyan text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase">Cos'è un Task?</h3>
+                  </div>
+                  <p class="text-gray-400">
+                    Attività generica che non porta necessariamente valore diretto all'utente finale (es. manutenzione server).
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════════
+           CAPITOLO 05: METODOLOGIE E METRICHE
+      ═══════════════════════════════════════════════ -->
+      <section>
+
+        <!-- Cap 05: Section Divider -->
+        <section class="section-divider" data-state="is-section-divider">
+          <div class="flex flex-col items-center justify-center gap-8 text-center max-w-4xl mx-auto">
+            <div class="flex items-center gap-4">
+              <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+              <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow">Capitolo 05</span>
+              <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+            </div>
+            <div class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(255,237,0,0.12)] border-aulab-yellow/20">
+              <i class="fa-solid fa-chart-line text-6xl text-aulab-yellow"></i>
+            </div>
+            <div class="space-y-2">
+              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">Agile</h1>
+              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Metrics</h1>
+            </div>
+            <div class="w-24 h-px bg-white/20"></div>
+            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">Misurare il successo e ottimizzare il flusso</p>
+          </div>
+        </section>
+
+
+        <!-- Slide 05.01: Scrum vs Kanban -->
+        <section id="slide-05-01">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.01 &mdash; Scrum vs Kanban</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Methodologies</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-2 gap-6 w-full">
+
+                <div class="glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <i class="fa-solid fa-rotate text-aulab-yellow text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase text-aulab-yellow">Scrum</h3>
+                  </div>
+                  <p class="text-gray-400" style="font-size: 10pt;">Focus sulla regolarità (Time-boxed).</p>
+                  <ul style="font-size: 0.75rem;">
+                    <li><strong class="text-white">Iterazioni</strong>: Sprint da 1 a 4 settimane.</li>
+                    <li><strong class="text-white">Ruoli</strong>: Scrum Master, Product Owner, Dev Team.</li>
+                    <li><strong class="text-white">Pianificazione</strong>: Poker estimation e Sprint Planning.</li>
+                  </ul>
+                </div>
+
+                <div class="glass-card border-l-4 border-aulab-cyan/50 flex flex-col gap-5">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                      <i class="fa-solid fa-infinity text-aulab-cyan text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase text-aulab-cyan">Kanban</h3>
+                  </div>
+                  <p class="text-gray-400" style="font-size: 10pt;">Focus sulla continuità (Flow-based).</p>
+                  <ul style="font-size: 0.75rem;">
+                    <li><strong class="text-white">WIP Limits</strong>: Limitare il lavoro in corso per evitare colli di bottiglia.</li>
+                    <li><strong class="text-white">Pull System</strong>: Il team "tira" il lavoro quando ha capacità.</li>
+                    <li><strong class="text-white">Continuous</strong>: Nessun iterazione fissa, rilascio continuo.</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 05.02: Story Points & Velocity -->
+        <section id="slide-05-02">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.02 &mdash; Estimations</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Velocity</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
+                <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <i class="fa-solid fa-ruler text-aulab-yellow text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-black uppercase">Misurare lo "Sforzo", non il "Tempo"</h3>
+                  </div>
+                  <div class="grid grid-cols-2 gap-8">
+                    <div class="flex flex-col gap-3">
+                      <h4 class="text-white" style="font-size: 0.875rem; margin: 0 !important;">Story Points</h4>
+                      <p class="text-gray-400" style="font-size: 0.75rem;">Stima relativa definita dal team in base a:</p>
+                      <ul style="font-size: 9pt;" class="text-gray-400 italic">
+                        <li>Complessità del compito</li>
+                        <li>Incertezza tecnica</li>
+                        <li>Quantità di lavoro</li>
+                      </ul>
+                    </div>
+                    <div class="flex flex-col gap-3 border-l border-white/5" style="padding-left: 2rem;">
+                      <h4 class="text-white" style="font-size: 0.875rem; margin: 0 !important;">Velocity</h4>
+                      <p class="text-gray-400" style="font-size: 0.75rem;">La media degli Story Points completati per sprint.</p>
+                      <ul style="font-size: 9pt;" class="text-gray-400 italic">
+                        <li>Aiuta a prevedere i rilasci futuri</li>
+                        <li>Stabilizza la capacità del team</li>
+                        <li>Non è una competizione tra team</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Slide 05.03: Reporting -->
+        <section id="slide-05-03">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
+              <div class="flex items-center gap-3">
+                <span class="w-2 h-8 bg-aulab-yellow"></span>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.03 &mdash; Reporting</h2>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Metrics</span>
+            </div>
+
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-3 gap-6 w-full">
+
+                <div class="glass-card flex flex-col items-center text-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20">
+                    <i class="fa-solid fa-arrow-trend-down text-red-400 text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white uppercase">Burndown Chart</h4>
+                    <p class="text-gray-500" style="font-size: 8pt;">Visualizza il lavoro rimanente vs il tempo dello sprint.</p>
+                  </div>
+                </div>
+
+                <div class="glass-card flex flex-col items-center text-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
+                    <i class="fa-solid fa-arrow-trend-up text-aulab-cyan text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white uppercase">Burnup Chart</h4>
+                    <p class="text-gray-500" style="font-size: 8pt;">Mostra il lavoro totale completato rispetto allo scopo totale.</p>
+                  </div>
+                </div>
+
+                <div class="glass-card flex flex-col items-center text-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
+                    <i class="fa-solid fa-triangle-exclamation text-aulab-yellow text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white uppercase">Scope Creep</h4>
+                    <p class="text-gray-500" style="font-size: 8pt;">Identifica quando il lavoro viene aggiunto a sprint già avviato.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0,
+      controls: true,
+      progress: true,
+      slideNumber: false,
+      hash: true,
+      transition: 'slide',
+      center: false
+    });
+  </script>
+</body>
+
+</html>
