@@ -1419,7 +1419,7 @@
 
 
       <!-- ═══════════════════════════════════════════════
-           CAPITOLO 05: METODOLOGIE E METRICHE
+           CAPITOLO 05: METRICHE E REPORTISTICA
       ═══════════════════════════════════════════════ -->
       <section>
 
@@ -1431,68 +1431,89 @@
               <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow">Capitolo 05</span>
               <span class="block w-12 h-px bg-aulab-yellow/40"></span>
             </div>
-            <div
-              class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(255,237,0,0.12)] border-aulab-yellow/20">
+            <div class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(255,237,0,0.12)] border-aulab-yellow/20">
               <i class="fa-solid fa-chart-line text-6xl text-aulab-yellow"></i>
             </div>
-            <div class="space-y-2">
-              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">Agile</h1>
-              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Metrics
-              </h1>
+            <div class="flex flex-col gap-2">
+              <h1 class="font-black tracking-[-0.05em] text-white leading-none uppercase">Metriche</h1>
+              <h1 class="font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Reportistica</h1>
             </div>
             <div class="w-24 h-px bg-white/20"></div>
-            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">Misurare il successo e ottimizzare il
-              flusso</p>
+            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">Cosa Jira ti mostra per tenere il progetto sotto controllo</p>
           </div>
         </section>
 
 
-        <!-- Slide 05.01: Scrum vs Kanban -->
+        <!-- Slide 05.01: La Dashboard -->
         <section id="slide-05-01">
           <div class="flex flex-col h-full">
             <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
               <div class="flex items-center gap-3">
                 <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.01 &mdash; Scrum vs Kanban</h2>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.01 &mdash; La Dashboard</h2>
               </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Methodologies</span>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Overview</span>
             </div>
 
             <div class="flex-1 flex items-center">
-              <div class="grid grid-cols-2 gap-6 w-full">
+              <div class="grid grid-cols-12 gap-5 w-full">
 
-                <div class="glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
-                      <i class="fa-solid fa-rotate text-aulab-yellow text-lg"></i>
+                <div class="col-span-5 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
+                  <h3 class="font-black uppercase">La home del PM</h3>
+                  <p class="text-gray-400" style="font-size: 0.9rem;">La Dashboard è la pagina di partenza in Jira. Mostra in un colpo d'occhio lo stato del progetto tramite <strong class="text-white">widget personalizzabili</strong>.</p>
+                  <div class="flex flex-col gap-2" style="font-size: 0.85rem;">
+                    <div class="flex items-center gap-3 text-gray-400">
+                      <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0"></span>
+                      <span>Puoi avere <strong class="text-white">più dashboard</strong> per progetti diversi.</span>
                     </div>
-                    <h3 class="text-xl font-black uppercase text-aulab-yellow">Scrum</h3>
+                    <div class="flex items-center gap-3 text-gray-400">
+                      <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0"></span>
+                      <span>Ogni widget si <strong class="text-white">configura in autonomia</strong> — mostri solo ciò che ti serve.</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-400">
+                      <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0"></span>
+                      <span>Si aggiorna in <strong class="text-white">tempo reale</strong> man mano che il team lavora.</span>
+                    </div>
                   </div>
-                  <p class="text-gray-400" style="font-size: 10pt;">Focus sulla regolarità (Time-boxed).</p>
-                  <ul style="font-size: 0.75rem;">
-                    <li><strong class="text-white">Iterazioni</strong>: Sprint da 1 a 4 settimane.</li>
-                    <li><strong class="text-white">Ruoli</strong>: Scrum Master, Product Owner, Dev Team.</li>
-                    <li><strong class="text-white">Pianificazione</strong>: Poker estimation e Sprint Planning.</li>
-                  </ul>
                 </div>
 
-                <div class="glass-card border-l-4 border-aulab-cyan/50 flex flex-col gap-5">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
-                      <i class="fa-solid fa-infinity text-aulab-cyan text-lg"></i>
+                <div class="col-span-7 grid grid-cols-2 gap-4">
+                  <div class="glass-card flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                      <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                        <i class="fa-solid fa-chart-pie text-aulab-yellow text-sm"></i>
+                      </div>
+                      <h4 class="text-white font-black uppercase" style="font-size: 0.75rem;">Issue Statistics</h4>
                     </div>
-                    <h3 class="text-xl font-black uppercase text-aulab-cyan">Kanban</h3>
+                    <p class="text-gray-500" style="font-size: 8pt;">Distribuzione delle issue per stato, priorità o assegnatario.</p>
                   </div>
-                  <p class="text-gray-400" style="font-size: 10pt;">Focus sulla continuità (Flow-based).</p>
-                  <ul style="font-size: 0.75rem;">
-                    <li><strong class="text-white">WIP Limits</strong>: Limitare il lavoro in corso per evitare colli di
-                      bottiglia.</li>
-                    <li><strong class="text-white">Pull System</strong>: Il team "tira" il lavoro quando ha capacità.
-                    </li>
-                    <li><strong class="text-white">Continuous</strong>: Nessun iterazione fissa, rilascio continuo.</li>
-                  </ul>
+                  <div class="glass-card flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                      <div class="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20 shrink-0">
+                        <i class="fa-solid fa-list text-blue-400 text-sm"></i>
+                      </div>
+                      <h4 class="text-white font-black uppercase" style="font-size: 0.75rem;">Issue Navigator</h4>
+                    </div>
+                    <p class="text-gray-500" style="font-size: 8pt;">Lista filtrata di issue direttamente nella dashboard.</p>
+                  </div>
+                  <div class="glass-card flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                      <div class="w-9 h-9 rounded-lg bg-green-500/10 flex items-center justify-center border border-green-500/20 shrink-0">
+                        <i class="fa-solid fa-user-clock text-green-400 text-sm"></i>
+                      </div>
+                      <h4 class="text-white font-black uppercase" style="font-size: 0.75rem;">Assigned to Me</h4>
+                    </div>
+                    <p class="text-gray-500" style="font-size: 8pt;">Tutto il lavoro assegnato a te, senza cercare.</p>
+                  </div>
+                  <div class="glass-card flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                      <div class="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
+                        <i class="fa-solid fa-clock-rotate-left text-purple-400 text-sm"></i>
+                      </div>
+                      <h4 class="text-white font-black uppercase" style="font-size: 0.75rem;">Activity Stream</h4>
+                    </div>
+                    <p class="text-gray-500" style="font-size: 8pt;">Feed di tutto ciò che è cambiato nel progetto.</p>
+                  </div>
                 </div>
 
               </div>
@@ -1501,103 +1522,120 @@
         </section>
 
 
-        <!-- Slide 05.02: Story Points & Velocity -->
+        <!-- Slide 05.02: I Report Built-in -->
         <section id="slide-05-02">
           <div class="flex flex-col h-full">
             <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
               <div class="flex items-center gap-3">
                 <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.02 &mdash; Estimations</h2>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.02 &mdash; I Report Built-in</h2>
               </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Velocity</span>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Reports</span>
             </div>
 
             <div class="flex-1 flex items-center">
               <div class="grid grid-cols-12 gap-5 w-full">
-                <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
-                      <i class="fa-solid fa-ruler text-aulab-yellow text-lg"></i>
-                    </div>
-                    <h3 class="text-xl font-black uppercase">Misurare lo "Sforzo", non il "Tempo"</h3>
+
+                <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/50 flex items-center gap-5">
+                  <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                    <i class="fa-solid fa-wand-magic-sparkles text-aulab-yellow text-sm"></i>
                   </div>
-                  <div class="grid grid-cols-2 gap-8">
-                    <div class="flex flex-col gap-3">
-                      <h4 class="text-white" style="font-size: 0.875rem; margin: 0 !important;">Story Points</h4>
-                      <p class="text-gray-400" style="font-size: 0.75rem;">Stima relativa definita dal team in base a:
-                      </p>
-                      <ul style="font-size: 9pt;" class="text-gray-400 italic">
-                        <li>Complessità del compito</li>
-                        <li>Incertezza tecnica</li>
-                        <li>Quantità di lavoro</li>
-                      </ul>
-                    </div>
-                    <div class="flex flex-col gap-3 border-l border-white/5" style="padding-left: 2rem;">
-                      <h4 class="text-white" style="font-size: 0.875rem; margin: 0 !important;">Velocity</h4>
-                      <p class="text-gray-400" style="font-size: 0.75rem;">La media degli Story Points completati per
-                        sprint.</p>
-                      <ul style="font-size: 9pt;" class="text-gray-400 italic">
-                        <li>Aiuta a prevedere i rilasci futuri</li>
-                        <li>Stabilizza la capacità del team</li>
-                        <li>Non è una competizione tra team</li>
-                      </ul>
-                    </div>
-                  </div>
+                  <p class="text-gray-300" style="font-size: 0.88rem;">Jira genera questi report <strong class="text-white">automaticamente</strong>. Non richiedono configurazione: bastano issue aggiornate e uno sprint attivo.</p>
                 </div>
+
+                <div class="col-span-4 glass-card flex flex-col gap-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20 shrink-0">
+                      <i class="fa-solid fa-arrow-trend-down text-red-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-black uppercase">Burndown Chart</h3>
+                  </div>
+                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Quanto lavoro resta</strong> rispetto ai giorni rimasti. La linea reale vs la linea ideale: sei in ritardo o in anticipo?</p>
+                </div>
+
+                <div class="col-span-4 glass-card flex flex-col gap-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <i class="fa-solid fa-chart-bar text-aulab-yellow text-lg"></i>
+                    </div>
+                    <h3 class="font-black uppercase">Sprint Report</h3>
+                  </div>
+                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Cosa è stato completato</strong> e cosa è rimasto fuori a fine sprint. La base per la review con gli stakeholder.</p>
+                </div>
+
+                <div class="col-span-4 glass-card flex flex-col gap-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                      <i class="fa-solid fa-wave-square text-aulab-cyan text-lg"></i>
+                    </div>
+                    <h3 class="font-black uppercase">Cumulative Flow</h3>
+                  </div>
+                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Dove si accumula il lavoro</strong> nel workflow. Se una colonna cresce, c'è un collo di bottiglia da risolvere.</p>
+                </div>
+
               </div>
             </div>
           </div>
         </section>
 
 
-        <!-- Slide 05.03: Reporting -->
+        <!-- Slide 05.03: Filtri -->
         <section id="slide-05-03">
           <div class="flex flex-col h-full">
             <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
               <div class="flex items-center gap-3">
                 <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.03 &mdash; Reporting</h2>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.03 &mdash; Filtri</h2>
               </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Metrics</span>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Search & Filter</span>
             </div>
 
             <div class="flex-1 flex items-center">
-              <div class="grid grid-cols-3 gap-6 w-full">
+              <div class="grid grid-cols-12 gap-5 w-full">
 
-                <div class="glass-card flex flex-col items-center text-center gap-4">
-                  <div
-                    class="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20">
-                    <i class="fa-solid fa-arrow-trend-down text-red-400 text-lg"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-white uppercase">Burndown Chart</h4>
-                    <p class="text-gray-500" style="font-size: 8pt;">Visualizza il lavoro rimanente vs il tempo dello
-                      sprint.</p>
+                <div class="col-span-5 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
+                  <h3 class="font-black uppercase">Interrogare il progetto</h3>
+                  <p class="text-gray-400" style="font-size: 0.9rem;">I filtri permettono di <strong class="text-white">creare viste personalizzate</strong> del backlog. Utile per trovare subito ciò che serve senza scorrere centinaia di issue.</p>
+                  <div class="rounded-xl bg-aulab-yellow/5 border border-aulab-yellow/15 flex flex-col gap-2" style="padding: 0.8rem 1rem;">
+                    <p class="text-aulab-yellow font-black uppercase" style="font-size: 0.68rem; letter-spacing: 0.2em;">Filtri base</p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Assegnatario</span>
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Stato</span>
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Priorità</span>
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Tipo issue</span>
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Epic</span>
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Sprint</span>
+                    </div>
                   </div>
                 </div>
 
-                <div class="glass-card flex flex-col items-center text-center gap-4">
-                  <div
-                    class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
-                    <i class="fa-solid fa-arrow-trend-up text-aulab-cyan text-lg"></i>
+                <div class="col-span-7 flex flex-col gap-4">
+                  <div class="glass-card flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                      <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                        <i class="fa-solid fa-floppy-disk text-aulab-yellow text-sm"></i>
+                      </div>
+                      <h4 class="text-white font-black uppercase" style="font-size: 0.78rem;">Filtri salvati</h4>
+                    </div>
+                    <p class="text-gray-400" style="font-size: 0.83rem;">Crea una volta, riusa sempre. Es: <span class="text-white">"Bug aperti ad alta priorità"</span> o <span class="text-white">"Tutto ciò che è bloccato"</span>.</p>
                   </div>
-                  <div>
-                    <h4 class="text-white uppercase">Burnup Chart</h4>
-                    <p class="text-gray-500" style="font-size: 8pt;">Mostra il lavoro totale completato rispetto allo
-                      scopo totale.</p>
+                  <div class="glass-card flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                      <div class="w-9 h-9 rounded-lg bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                        <i class="fa-solid fa-table-columns text-aulab-cyan text-sm"></i>
+                      </div>
+                      <h4 class="text-white font-black uppercase" style="font-size: 0.78rem;">Board personalizzata</h4>
+                    </div>
+                    <p class="text-gray-400" style="font-size: 0.83rem;">Un filtro salvato può diventare una <strong class="text-white">board dedicata</strong>. Utile per avere una vista separata per ogni team o area.</p>
                   </div>
-                </div>
-
-                <div class="glass-card flex flex-col items-center text-center gap-4">
-                  <div
-                    class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
-                    <i class="fa-solid fa-triangle-exclamation text-aulab-yellow text-lg"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-white uppercase">Scope Creep</h4>
-                    <p class="text-gray-500" style="font-size: 8pt;">Identifica quando il lavoro viene aggiunto a sprint
-                      già avviato.</p>
+                  <div class="glass-card flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                      <div class="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
+                        <i class="fa-solid fa-code text-purple-400 text-sm"></i>
+                      </div>
+                      <h4 class="text-white font-black uppercase" style="font-size: 0.78rem;">JQL</h4>
+                    </div>
+                    <p class="text-gray-400" style="font-size: 0.83rem;">Jira Query Language: per chi vuole filtri avanzati. Non è necessario all'inizio, ma è potente per report complessi.</p>
                   </div>
                 </div>
 
