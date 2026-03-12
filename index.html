@@ -1285,40 +1285,58 @@
             <div class="flex-1 flex items-center">
               <div class="grid grid-cols-12 gap-5 w-full">
 
-                <div class="col-span-8 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
-                      <i class="fa-solid fa-user text-aulab-yellow text-lg"></i>
+                <div class="col-span-7 glass-card border-l-4 border-aulab-cyan/50 flex flex-col gap-5">
+                  <h3 class="font-black uppercase">Il formato standard</h3>
+
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.6rem 0.9rem;">
+                      <span class="rounded font-black uppercase text-aulab-yellow shrink-0" style="font-size: 0.7rem; min-width: 72px;">As a</span>
+                      <span class="w-px h-4 bg-white/15 shrink-0"></span>
+                      <span class="text-gray-400" style="font-size: 0.85rem;">Come <span class="text-white">[Utente / Persona]</span></span>
                     </div>
-                    <h3 class="text-xl font-black uppercase">Il formato standard</h3>
+                    <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.6rem 0.9rem;">
+                      <span class="rounded font-black uppercase text-aulab-yellow shrink-0" style="font-size: 0.7rem; min-width: 72px;">I want to</span>
+                      <span class="w-px h-4 bg-white/15 shrink-0"></span>
+                      <span class="text-gray-400" style="font-size: 0.85rem;">Voglio <span class="text-white">[Azione / Funzionalità]</span></span>
+                    </div>
+                    <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.6rem 0.9rem;">
+                      <span class="rounded font-black uppercase text-aulab-yellow shrink-0" style="font-size: 0.7rem; min-width: 72px;">So that</span>
+                      <span class="w-px h-4 bg-white/15 shrink-0"></span>
+                      <span class="text-gray-400" style="font-size: 0.85rem;">In modo da <span class="text-white">[Valore / Beneficio]</span></span>
+                    </div>
                   </div>
-                  <div class="flex flex-col gap-5">
-                    <div class="flex gap-4 items-start">
-                      <span class="text-aulab-yellow font-black shrink-0">As a:</span>
-                      <p class="text-gray-300">Come [Utente / Persona]</p>
-                    </div>
-                    <div class="flex gap-4 items-start">
-                      <span class="text-aulab-yellow font-black shrink-0">I want to:</span>
-                      <p class="text-gray-300">Desidero [Azione / Funzionalità]</p>
-                    </div>
-                    <div class="flex gap-4 items-start">
-                      <span class="text-aulab-yellow font-black shrink-0">So that:</span>
-                      <p class="text-gray-300">In modo da [Valore / Beneficio]</p>
-                    </div>
+
+                  <div class="rounded-xl border border-aulab-cyan/20 bg-aulab-cyan/5 flex flex-col gap-2" style="padding: 0.8rem 1rem;">
+                    <span class="text-aulab-cyan font-black uppercase" style="font-size: 0.65rem; letter-spacing: 0.2em;">Esempio</span>
+                    <p class="text-gray-300" style="font-size: 0.85rem; line-height: 1.6;">
+                      "Come <strong class="text-white">cliente</strong>, voglio <strong class="text-white">aggiungere prodotti al carrello</strong>, in modo da <strong class="text-white">acquistarli in un'unica transazione</strong>."
+                    </p>
                   </div>
                 </div>
 
-                <div class="col-span-4 glass-card border-aulab-cyan/30 flex flex-col justify-center gap-4">
-                  <div
-                    class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
-                    <i class="fa-solid fa-check-double text-aulab-cyan text-lg"></i>
+                <div class="col-span-5 glass-card border-l-4 border-aulab-cyan/30 flex flex-col gap-5">
+                  <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                      <i class="fa-solid fa-check-double text-aulab-cyan text-lg"></i>
+                    </div>
+                    <h3 class="font-black uppercase">Acceptance Criteria</h3>
                   </div>
-                  <h4 class="text-white">Acceptance Criteria</h4>
-                  <p class="text-gray-400 leading-relaxed italic border-l border-white/10"
-                    style="padding-left: 1rem; font-size: 10pt;">
-                    La lista di condizioni che devono essere soddisfatte perché la story sia considerata "Done".
-                  </p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;">La lista di condizioni che devono essere soddisfatte perché la story sia "Done".</p>
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-3 text-gray-400" style="font-size: 0.82rem;">
+                      <i class="fa-regular fa-square-check text-aulab-cyan shrink-0"></i>
+                      <span>L'utente può aggiungere N unità</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-400" style="font-size: 0.82rem;">
+                      <i class="fa-regular fa-square-check text-aulab-cyan shrink-0"></i>
+                      <span>Il totale si aggiorna in tempo reale</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-400" style="font-size: 0.82rem;">
+                      <i class="fa-regular fa-square-check text-aulab-cyan shrink-0"></i>
+                      <span>Prodotto non disponibile → messaggio errore</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-600 italic" style="font-size: 8pt;">Se tutti i criteri sono soddisfatti, il task è Done. Niente ambiguità.</p>
                 </div>
 
               </div>
@@ -1327,46 +1345,69 @@
         </section>
 
 
-        <!-- Slide 04.03: Bug Tracking -->
+        <!-- Slide 04.03: Quando usare quale tipo -->
         <section id="slide-04-03">
           <div class="flex flex-col h-full">
             <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
               <div class="flex items-center gap-3">
                 <span class="w-2 h-8 bg-aulab-cyan"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">04.03 &mdash; Bug Tracking</h2>
+                <h2 class="text-2xl font-black uppercase tracking-widest text-white">04.03 &mdash; Quando Usare Quale Tipo</h2>
               </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Quality Control</span>
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Issue Types</span>
             </div>
 
             <div class="flex-1 flex items-center">
               <div class="grid grid-cols-12 gap-5 w-full">
 
-                <div class="col-span-6 glass-card border-l-4 border-red-500/50 flex flex-col gap-4">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20 shrink-0">
-                      <i class="fa-solid fa-bug text-red-400 text-lg"></i>
+                <div class="col-span-3 glass-card flex flex-col gap-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
+                      <i class="fa-solid fa-bolt text-purple-400 text-lg"></i>
                     </div>
-                    <h3 class="text-xl font-black uppercase text-red-100">Cos'è un Bug?</h3>
+                    <h3 class="font-black uppercase text-purple-200">Epic</h3>
                   </div>
-                  <p class="text-gray-400">
-                    Un'anomalia rispetto al comportamento atteso. Non è una nuova funzionalità, ma un errore da
-                    correggere.
-                  </p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;">Un grande obiettivo che raggruppa più storie. Dura settimane o mesi.</p>
+                  <p class="text-gray-600 italic" style="font-size: 8pt;">"Realizzare il checkout dell'e-commerce"</p>
                 </div>
 
-                <div class="col-span-6 glass-card border-l-4 border-aulab-cyan/50 flex flex-col gap-4">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                <div class="col-span-3 glass-card flex flex-col gap-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20 shrink-0">
+                      <i class="fa-solid fa-user text-blue-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-black uppercase text-blue-200">Story</h3>
+                  </div>
+                  <p class="text-gray-400" style="font-size: 0.85rem;">Una funzionalità vista dal punto di vista dell'utente. Formato: "Come utente, voglio…"</p>
+                  <p class="text-gray-600 italic" style="font-size: 8pt;">"Aggiungere un prodotto al carrello"</p>
+                </div>
+
+                <div class="col-span-3 glass-card flex flex-col gap-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
                       <i class="fa-solid fa-list-check text-aulab-cyan text-lg"></i>
                     </div>
-                    <h3 class="text-xl font-black uppercase">Cos'è un Task?</h3>
+                    <h3 class="font-black uppercase text-aulab-cyan">Task</h3>
                   </div>
-                  <p class="text-gray-400">
-                    Attività generica che non porta necessariamente valore diretto all'utente finale (es. manutenzione
-                    server).
-                  </p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;">Lavoro tecnico o operativo che non porta valore diretto all'utente.</p>
+                  <p class="text-gray-600 italic" style="font-size: 8pt;">"Aggiornare le dipendenze del progetto"</p>
+                </div>
+
+                <div class="col-span-3 glass-card flex flex-col gap-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20 shrink-0">
+                      <i class="fa-solid fa-bug text-red-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-black uppercase text-red-300">Bug</h3>
+                  </div>
+                  <p class="text-gray-400" style="font-size: 0.85rem;">Qualcosa che non funziona come previsto. Non una nuova funzione, ma un errore da correggere.</p>
+                  <p class="text-gray-600 italic" style="font-size: 8pt;">"Il pagamento fallisce su mobile"</p>
+                </div>
+
+                <div class="col-span-12 glass-card bg-gradient-to-r from-aulab-cyan/5 to-transparent flex items-center gap-5">
+                  <div class="w-9 h-9 rounded-lg bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                    <i class="fa-solid fa-lightbulb text-aulab-cyan text-base"></i>
+                  </div>
+                  <p class="text-gray-300" style="font-size: 0.85rem;">Nel dubbio, usa <strong class="text-white">Story</strong> per tutto ciò che porta valore all'utente e <strong class="text-white">Task</strong> per tutto il resto. Il tipo si può sempre cambiare dopo.</p>
                 </div>
 
               </div>
