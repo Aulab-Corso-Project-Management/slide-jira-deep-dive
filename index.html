@@ -1831,16 +1831,16 @@
                 </div>
                 <div class="rounded-xl bg-black/40 border border-white/8" style="padding: 1rem 1.2rem; flex: 1; min-height: 0; overflow-y: auto;">
                   <p id="jira-prompt-display" class="text-gray-300 leading-relaxed" style="font-size: 0.75rem; font-family: 'Courier New', monospace;">
-                    Sei il Product Owner di una startup che vuole costruire <span class="text-aulab-yellow">un'app web di food delivery locale</span> — una piattaforma che permette ai ristoranti del territorio di ricevere ordini online e gestirne la consegna a domicilio.<br><br>
-                    Presentami il progetto in formato strutturato per Jira Scrum, includendo:<br><br>
-                    <span class="text-white">1. Obiettivo del progetto</span> (2-3 frasi): cosa fa il prodotto e per chi.<br><br>
-                    <span class="text-white">2. 3 Epic</span> con nome breve e descrizione (1 frase ciascuna).<br><br>
+                    Sei il Project Manager di una startup che vuole costruire <span class="text-aulab-yellow">un'app web di food delivery locale</span> — una piattaforma che permette ai ristoranti del territorio di ricevere ordini online e gestirne la consegna a domicilio.<br><br>
+                    Devi pianificare il progetto su Jira. Presentami la struttura completa includendo:<br><br>
+                    <span class="text-white">1. Obiettivo del progetto</span> (2-3 frasi): cosa si vuole realizzare, per chi e con quale team.<br><br>
+                    <span class="text-white">2. 3 Epic</span> con nome breve e descrizione (1 frase ciascuna), che rappresentino le macro-aree di lavoro.<br><br>
                     <span class="text-white">3. Per ogni Epic: 3 User Story</span> nel formato:<br>
                     &nbsp;&nbsp;"Come [tipo di utente], voglio [azione], in modo da [beneficio]."<br>
                     &nbsp;&nbsp;Aggiungi 2-3 Acceptance Criteria per ciascuna.<br><br>
-                    <span class="text-white">4. Per ogni Story: 2 Task</span> tecnici o operativi.<br><br>
-                    <span class="text-white">5. Per almeno 2 Task: 1 Sub-task</span> di dettaglio tecnico.<br><br>
-                    Formatta l'output in modo gerarchico e chiaro. Il progetto deve essere realistico, adatto a <span class="text-aulab-yellow">uno sprint di 2 settimane per un team di 3 persone</span>.
+                    <span class="text-white">4. Per ogni Story: 2 Task</span> concreti e assegnabili a un membro del team.<br><br>
+                    <span class="text-white">5. Per almeno 2 Task: 1 Sub-task</span> di dettaglio operativo o tecnico.<br><br>
+                    Formatta l'output in modo gerarchico e chiaro. Il piano deve essere realistico, adatto a <span class="text-aulab-yellow">uno sprint di 2 settimane per un team di 3 persone</span>.
                   </p>
                 </div>
               </div>
@@ -1851,7 +1851,7 @@
 
         <script>
           function copyJiraPrompt() {
-            var text = "Sei il Product Owner di una startup che vuole costruire un'app web di food delivery locale — una piattaforma che permette ai ristoranti del territorio di ricevere ordini online e gestirne la consegna a domicilio.\n\nPresentami il progetto in formato strutturato per Jira Scrum, includendo:\n\n1. Obiettivo del progetto (2-3 frasi): cosa fa il prodotto e per chi.\n\n2. 3 Epic con nome breve e descrizione (1 frase ciascuna).\n\n3. Per ogni Epic: 3 User Story nel formato:\n  \"Come [tipo di utente], voglio [azione], in modo da [beneficio].\"\n  Aggiungi 2-3 Acceptance Criteria per ciascuna.\n\n4. Per ogni Story: 2 Task tecnici o operativi.\n\n5. Per almeno 2 Task: 1 Sub-task di dettaglio tecnico.\n\nFormatta l'output in modo gerarchico e chiaro. Il progetto deve essere realistico, adatto a uno sprint di 2 settimane per un team di 3 persone.";
+            var text = "Sei il Project Manager di una startup che vuole costruire un'app web di food delivery locale — una piattaforma che permette ai ristoranti del territorio di ricevere ordini online e gestirne la consegna a domicilio.\n\nDevi pianificare il progetto su Jira. Presentami la struttura completa includendo:\n\n1. Obiettivo del progetto (2-3 frasi): cosa si vuole realizzare, per chi e con quale team.\n\n2. 3 Epic con nome breve e descrizione (1 frase ciascuna), che rappresentino le macro-aree di lavoro.\n\n3. Per ogni Epic: 3 User Story nel formato:\n  \"Come [tipo di utente], voglio [azione], in modo da [beneficio].\"\n  Aggiungi 2-3 Acceptance Criteria per ciascuna.\n\n4. Per ogni Story: 2 Task concreti e assegnabili a un membro del team.\n\n5. Per almeno 2 Task: 1 Sub-task di dettaglio operativo o tecnico.\n\nFormatta l'output in modo gerarchico e chiaro. Il piano deve essere realistico, adatto a uno sprint di 2 settimane per un team di 3 persone.";
             navigator.clipboard.writeText(text).then(function() {
               var btn = document.getElementById('copy-prompt-btn');
               var icon = document.getElementById('copy-icon');
