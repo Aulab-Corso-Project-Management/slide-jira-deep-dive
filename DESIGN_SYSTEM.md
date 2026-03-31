@@ -2,6 +2,8 @@
 
 Stack: **Reveal.js 5.1** · **Tailwind CSS v4 (browser CDN)** · **Font Awesome 6.5** · **Montserrat**
 
+> **File CSS:** `style.css` (senza 's')
+
 ---
 
 ## Colori
@@ -13,9 +15,9 @@ Stack: **Reveal.js 5.1** · **Tailwind CSS v4 (browser CDN)** · **Font Awesome 
 | `dark-bg` | `#0B0E14` | Background globale |
 | `white/[0.05]` | rgba bianco 5% | Fill glass card |
 | `white/[0.12]` | rgba bianco 12% | Bordo glass card |
-| `gray-400` | `#9CA3AF` | Testo body muted |
-| `gray-500` | `#6B7280` | Testo molto muted, label secondari |
-| `gray-600` | `#4B5563` | Footer micro-label nelle card |
+| `gray-300` | `#D1D5DB` | Testo secondario leggibile, testo enfatizzato nelle card |
+| `gray-400` | `#9CA3AF` | Testo body muted — **colore minimo per leggibilità** |
+| `gray-600` | `#4B5563` | Separatori, frecce decorative (`fa-chevron-right`) |
 
 ### Gradient testo
 ```html
@@ -29,17 +31,17 @@ Usare solo dentro card o elementi inline — **mai sui titoli h1 delle section d
 
 > ⚠️ **Reveal.js usa `* { margin: 0; padding: 0 }` non-layered.** Tailwind v4 mette le utility in `@layer utilities`. Le regole non-layered battono quelle layered indipendentemente dalla specificità.
 
-**Regola pratica:** margin, padding e font-size su heading si definiscono sempre in `styles.css` con `!important`.
+**Regola pratica:** margin, padding e font-size su heading si definiscono sempre in `style.css` con `!important`.
 
 | Proprietà CSS | Usa Tailwind? | Note |
 |---------------|---------------|------|
-| `padding` | ❌ Mai | Definire in `styles.css` con `!important` |
-| `margin` | ❌ Mai | Definire in `styles.css` con `!important` |
-| `font-size` su `<h1>`, `<p>`, `<h4>` | ❌ | Reveal.js override; definire in `styles.css` |
+| `padding` | ❌ Mai | Definire in `style.css` con `!important` |
+| `margin` | ❌ Mai | Definire in `style.css` con `!important` |
+| `font-size` su `<h1>`, `<p>`, `<h4>` | ❌ | Reveal.js override; definire in `style.css` |
 | `border-radius` | ✅ | Non resettato da Reveal |
 | `gap` | ✅ | Proprietà flex/grid, non resettata |
 | `background`, `color` | ✅ | Non resettati da Reveal |
-| `h-full` su div slide | ✅ | Funziona perché `styles.css` setta `height: 100%` sulle section |
+| `h-full` su div slide | ✅ | Funziona perché `style.css` setta `height: 100%` sulle section |
 
 ### Centering fix — `:has(> section)`
 
@@ -61,7 +63,7 @@ Le section che wrappano capitoli (group-container) **non** devono ricevere `disp
 
 | Elemento | Classe Tailwind | Valore reale (CSS) | Contesto |
 |----------|----------------|--------------------|----------|
-| Titolo section divider (h1) | — | `3rem` via `.reveal .slides section.section-divider h1` in `styles.css` | Solo slide capitolo |
+| Titolo section divider (h1) | — | `3rem` via `.reveal .slides section.section-divider h1` in `style.css` | Solo slide capitolo |
 | Eyebrow label | `text-sm font-black uppercase tracking-[0.4em]` | — | Slide benvenuto / capitolo |
 | Heading card h3/h4 | — | `1.2rem` via `.reveal .glass-card h3,h4` | Dentro `.glass-card` |
 | Body card p/li | — | `1rem` via `.reveal .glass-card p,li` | Dentro `.glass-card` |
@@ -119,7 +121,7 @@ Prima slide di ogni sezione. Classe `section-divider` + `data-state="is-section-
 </section>
 ```
 
-> **Nota:** `font-size` degli h1 è controllata da `styles.css` (`.reveal .slides section.section-divider h1 { font-size: 3rem !important; }`). Le classi Tailwind `text-[*rem]` su h1 **non applicano** in Reveal.js.
+> **Nota:** `font-size` degli h1 è controllata da `style.css` (`.reveal .slides section.section-divider h1 { font-size: 3rem !important; }`). Le classi Tailwind `text-[*rem]` su h1 **non applicano** in Reveal.js.
 
 ---
 
@@ -131,9 +133,9 @@ Struttura obbligatoria: `.slide-header` + wrapper centrato + grid.
 <section id="slide-id">
   <div class="flex flex-col h-full">
 
-    <!-- Eyebrow header — margin-bottom 50px via .slide-header in styles.css -->
+    <!-- Eyebrow header — margin-bottom 50px via .slide-header in style.css -->
     <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
-      <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+      <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
         01.01 &mdash; Label
       </span>
     </div>
@@ -159,9 +161,21 @@ Struttura obbligatoria: `.slide-header` + wrapper centrato + grid.
 <div class="glass-card">...</div>
 ```
 
-Padding da `styles.css`:
+Padding da `style.css`:
 ```css
 .reveal .glass-card { padding: 2.5rem 3rem !important; }
+```
+
+#### Variante compatta — `glass-card-sm`
+
+Per layout a step/flow con molte card affiancate. Si usa **insieme** a `glass-card`:
+
+```html
+<div class="flex-1 glass-card glass-card-sm flex flex-col gap-3">...</div>
+```
+
+```css
+.reveal .glass-card-sm { padding: 1.5rem 1.75rem !important; }
 ```
 
 #### Varianti bordo
@@ -207,11 +221,49 @@ Padding da `styles.css`:
 ```html
 <ul class="space-y-4">
   <li class="flex items-center gap-3 text-sm text-gray-400">
+    <!-- dot yellow (capitoli dispari) -->
     <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0"></span>
+    <!-- dot cyan (capitoli pari) -->
+    <!-- <span class="w-1.5 h-1.5 rounded-full bg-aulab-cyan shrink-0"></span> -->
     <span>Testo. <strong class="text-white font-semibold">Keyword</strong> continua.</span>
   </li>
 </ul>
 ```
+
+> **Nota:** Usare `mt-2` sul dot quando il testo va su più righe per allineamento visivo al top.
+
+### Prompt Block
+
+Blocco monospace per mostrare esempi di prompt. Padding da `style.css`.
+
+```html
+<div class="prompt-block">
+  <span class="text-aulab-cyan font-bold">[RUOLO]</span>
+  <span class="text-white/90">Sei un senior PM...</span>
+</div>
+
+<!-- versione più piccola -->
+<div class="prompt-block text-sm" style="flex:1;">...</div>
+```
+
+```css
+.prompt-block {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 16px !important;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem !important;
+  line-height: 1.6 !important;
+  color: #9CA3AF;
+}
+```
+
+Colorazione token prompt consigliata:
+- `text-aulab-cyan font-bold` → `[RUOLO]`, `[TASK]`
+- `text-aulab-yellow font-bold` → `[ESEMPIO]`
+- `text-gray-300 font-bold` → `[CONTESTO]`
+- `text-white/90` → testo del contenuto
 
 ---
 
@@ -249,7 +301,7 @@ Padding da `styles.css`:
     <div class="flex-1 glass-card flex flex-col items-center justify-center text-center">
       <div class="flex flex-col items-center gap-4">
         <span class="block text-4xl font-black text-gray-300 italic tracking-tighter leading-none">Titolo</span>
-        <p class="text-xs text-gray-500 leading-relaxed uppercase tracking-wider">Anno · Descrizione</p>
+        <p class="text-xs text-gray-400 leading-relaxed uppercase tracking-wider">Anno · Descrizione</p>
       </div>
     </div>
 
@@ -265,18 +317,38 @@ Padding da `styles.css`:
 
 ### Agenda (slide indice)
 
+Le voci agenda sono **link** verso i capitoli. La sezione `<section>` di ogni capitolo deve avere `id="cap-XX"`. La slide agenda deve avere `id="agenda"` per la regola CSS `text-decoration: none`.
+
 ```html
-<div class="grid grid-cols-2 gap-x-16 gap-y-8">
-  <div class="flex items-center gap-6 group">
-    <div class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
-      <span class="text-xl font-black text-aulab-yellow">01</span>
-    </div>
-    <div class="flex flex-col gap-1">
+<section id="agenda">
+  ...
+  <div class="grid grid-cols-2 gap-x-16 gap-y-8 w-full">
+
+    <a href="#/cap-01" class="flex items-center gap-6 group no-underline">
+      <div class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
+        <span class="text-xl font-black text-aulab-yellow">01</span>
+      </div>
       <span class="text-xl font-bold text-white uppercase tracking-tight">Titolo Capitolo</span>
-    </div>
+    </a>
+
+    <!-- capitolo pari: cyan -->
+    <a href="#/cap-02" class="flex items-center gap-6 group no-underline">
+      <div class="w-14 h-14 rounded-2xl bg-aulab-cyan/5 flex items-center justify-center border border-aulab-cyan/10 group-hover:border-aulab-cyan/40 transition-all duration-500 shrink-0">
+        <span class="text-xl font-black text-aulab-cyan">02</span>
+      </div>
+      <span class="text-xl font-bold text-white uppercase tracking-tight">Titolo Capitolo</span>
+    </a>
+
   </div>
-  <!-- ripetere per ogni capitolo, alternando yellow/cyan -->
-</div>
+</section>
+```
+
+```css
+/* in style.css — rimuove underline su tutti i link nell'agenda */
+#agenda a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
 ```
 
 > **Nota:** I sottotitoli descrittivi in inglese (tipo "Introduction", "Architecture") sono stati rimossi. Ogni voce agenda ha solo il titolo italiano del capitolo.
@@ -286,10 +358,12 @@ Padding da `styles.css`:
 ## Struttura HTML Obbligatoria
 
 ```
-section[id="..."]
-  div.flex.flex-col.h-full
-    div.slide-header                   ← eyebrow, margin-bottom 50px via CSS
-    div.flex-1.flex.items-center       ← wrapper centramento verticale
-      div.grid.w-full                  ← layout (grid-cols-12 o grid-cols-2)
-        div.glass-card                 ← card con padding da styles.css
+section[id="cap-XX"]               ← wrapper capitolo, id per deep link dall'agenda
+  section.section-divider          ← prima slide del capitolo
+  section[id="slide-id"]           ← slide normali
+    div.flex.flex-col.h-full
+      div.slide-header             ← eyebrow, margin-bottom 50px via CSS
+      div.flex-1.flex.items-center ← wrapper centramento verticale
+        div.grid.w-full            ← layout (grid-cols-12 o grid-cols-2)
+          div.glass-card           ← card con padding da style.css
 ```

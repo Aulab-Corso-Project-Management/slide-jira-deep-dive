@@ -1,0 +1,185 @@
+/* ============================================================
+   VARIABLES
+   ============================================================ */
+:root {
+  --aulab-yellow: #ffed00;
+  --aulab-cyan:   #38bdf8;
+  --dark-bg:      #0B0E14;
+  --slide-padding-x: 80px;
+  --slide-padding-y: 50px;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: var(--dark-bg) !important;
+}
+
+.reveal {
+  font-family: 'Montserrat', sans-serif !important;
+  background: var(--dark-bg) !important;
+  color: #fff !important;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+/* ============================================================
+   SLIDE HEIGHT CHAIN
+   ============================================================ */
+.reveal .slides section {
+  height: 100% !important;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   LEAF SLIDE LAYOUT
+   ============================================================ */
+.reveal .slides section:not(:has(> section)) {
+  padding: var(--slide-padding-y) var(--slide-padding-x) !important;
+  display: flex !important;
+  flex-direction: column;
+}
+
+/* ============================================================
+   SECTION DIVIDER
+   ============================================================ */
+.reveal .slides section.section-divider {
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+}
+
+.reveal .slides section.section-divider h1 {
+  font-size: 3rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  color: #fff;
+}
+
+/* ============================================================
+   WELCOME / CLOSING SLIDE
+   ============================================================ */
+.reveal .slides section.welcome-slide {
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+}
+
+.reveal .slides section.welcome-slide h1 {
+  font-size: 3.5rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+}
+
+/* ============================================================
+   SLIDE HEADER
+   ============================================================ */
+.reveal .slide-header {
+  margin-bottom: 50px !important;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   GLASS CARD
+   ============================================================ */
+.reveal .glass-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px;
+  padding: 2.5rem 3rem !important;
+  box-sizing: border-box;
+}
+
+.reveal .glass-card h3,
+.reveal .glass-card h4 {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  color: #fff;
+}
+
+.reveal .glass-card p,
+.reveal .glass-card li {
+  font-size: 1rem !important;
+  margin: 0 !important;
+  line-height: 1.6 !important;
+}
+
+/* ============================================================
+   TYPOGRAPHY RESET — prevent Reveal.js overrides
+   ============================================================ */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 !important;
+  text-transform: none;
+}
+
+.reveal p {
+  margin: 0 !important;
+}
+
+/* ============================================================
+   TEXT GRADIENT
+   ============================================================ */
+.text-gradient {
+  background: linear-gradient(135deg, var(--aulab-yellow) 0%, var(--aulab-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================
+   MONOSPACE BLOCK (prompt example)
+   ============================================================ */
+.prompt-block {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 16px !important;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem !important;
+  line-height: 1.6 !important;
+  color: #9CA3AF;
+}
+
+/* ============================================================
+   GLASS CARD SMALL — padding ridotto per layout compatti (step, flow)
+   ============================================================ */
+.reveal .glass-card-sm {
+  padding: 1.5rem 1.75rem !important;
+}
+
+/* ============================================================
+   PROGRESS BAR & CONTROLS
+   ============================================================ */
+.reveal .progress {
+  color: var(--aulab-yellow) !important;
+  height: 3px;
+}
+
+.reveal .controls {
+  color: var(--aulab-yellow) !important;
+}
+
+/* ============================================================
+   AGENDA LINKS
+   ============================================================ */
+#agenda a {
+  text-decoration: none !important;
+  color: inherit !important;
+}

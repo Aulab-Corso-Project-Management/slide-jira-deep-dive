@@ -6,18 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jira Presentation — Aulab System</title>
 
-  <!-- Reveal.js core -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <!-- Reveal.js base -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
 
   <!-- Tailwind CSS v4 via CDN -->
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
+  <!-- Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Custom styles -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 
   <style type="text/tailwindcss">
     @theme {
@@ -34,116 +39,103 @@
       <!-- ═══════════════════════════════════════════════
            INTRODUZIONE (Welcome + Agenda)
       ═══════════════════════════════════════════════ -->
-      <section>
 
-        <!-- SLIDE DI BENVENUTO -->
-        <section class="section-divider" data-state="is-section-divider">
-          <div class="flex flex-col items-center justify-center gap-10 text-center max-w-4xl mx-auto">
+      <!-- SLIDE DI BENVENUTO -->
+      <section class="welcome-slide">
+        <div class="flex flex-col items-center gap-8 text-center">
 
-            <div class="flex items-center gap-4">
-              <span class="block w-12 h-px bg-aulab-yellow/40"></span>
-              <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow">Aulab Masterclass</span>
-              <span class="block w-12 h-px bg-aulab-yellow/40"></span>
-            </div>
-
-            <div style="filter: drop-shadow(0 0 60px rgba(38,132,255,0.4));">
-              <img src="media/jira-logo.png" alt="Jira" style="width: 140px; height: 140px; object-fit: contain;">
-            </div>
-
-            <div class="space-y-2">
-              <h1 class="text-[8rem] font-black tracking-[-0.05em] text-white leading-none uppercase">Deep Dive</h1>
-              <h1 class="text-[8rem] font-black tracking-[-0.05em] text-white leading-none uppercase">su Jira Cloud</h1>
-            </div>
-
-            <div class="w-24 h-px bg-white/20"></div>
-
-            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">
-              Gestione avanzata del lavoro e dei processi Agile
-            </p>
+          <div class="flex items-center gap-4">
+            <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+            <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow/80">Aulab Masterclass</span>
+            <span class="block w-12 h-px bg-aulab-yellow/40"></span>
           </div>
-        </section>
 
-
-        <!-- AGENDA -->
-        <section id="slide-agenda">
-          <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">Contenuti della lezione</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Agenda 2025</span>
+          <div style="filter: drop-shadow(0 0 80px rgba(38,132,255,0.35));">
+            <div
+              class="w-28 h-28 rounded-3xl bg-aulab-cyan/10 border border-aulab-cyan/30 flex items-center justify-center">
+              <img src="media/jira-logo.png" alt="Jira" style="width: 80px; height: 80px; object-fit: contain;">
             </div>
+          </div>
 
-            <div class="flex-1 flex items-center">
-              <div class="grid grid-cols-12 gap-8 w-full">
-                <div class="col-span-12 glass-card border-aulab-yellow/10">
-                  <div class="grid grid-cols-2 gap-x-16 gap-y-8">
+          <div class="flex flex-col gap-2">
+            <h1 class="text-white">Deep Dive</h1>
+            <h1 class="text-white">su Jira Cloud</h1>
+          </div>
 
-                    <div class="flex items-center gap-6 group">
-                      <div
-                        class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
-                        <span class="text-xl font-black text-aulab-yellow">01</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-xl font-bold text-white uppercase tracking-tight">Jira &amp; Filosofia</span>
-                      </div>
-                    </div>
+          <div class="w-24 h-px bg-white/20"></div>
 
-                    <div class="flex items-center gap-6 group">
-                      <div
-                        class="w-14 h-14 rounded-2xl bg-aulab-cyan/5 flex items-center justify-center border border-aulab-cyan/10 group-hover:border-aulab-cyan/40 transition-all duration-500 shrink-0">
-                        <span class="text-xl font-black text-aulab-cyan">02</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-xl font-bold text-white uppercase tracking-tight">Setup &amp; Struttura</span>
-                      </div>
-                    </div>
+          <p class="text-lg font-medium uppercase tracking-[0.2em] text-white/50">
+            Gestione avanzata del lavoro e dei processi Agile
+          </p>
 
-                    <div class="flex items-center gap-6 group">
-                      <div
-                        class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
-                        <span class="text-xl font-black text-aulab-yellow">03</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-xl font-bold text-white uppercase tracking-tight">Logica &amp; Processi</span>
-                      </div>
-                    </div>
+        </div>
+      </section>
 
-                    <div class="flex items-center gap-6 group">
-                      <div
-                        class="w-14 h-14 rounded-2xl bg-aulab-cyan/5 flex items-center justify-center border border-aulab-cyan/10 group-hover:border-aulab-cyan/40 transition-all duration-500 shrink-0">
-                        <span class="text-xl font-black text-aulab-cyan">04</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-xl font-bold text-white uppercase tracking-tight">Gerarchia &amp; Issues</span>
-                      </div>
-                    </div>
 
-                    <div class="flex items-center gap-6 group">
-                      <div
-                        class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
-                        <span class="text-xl font-black text-aulab-yellow">05</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-xl font-bold text-white uppercase tracking-tight">Metriche &amp; Reportistica</span>
-                      </div>
-                    </div>
+      <!-- AGENDA -->
+      <section id="agenda">
+        <div class="flex flex-col h-full">
 
-                  </div>
+          <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+            <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+              Agenda
+            </span>
+          </div>
+
+          <div class="flex-1 flex items-center">
+            <div class="grid grid-cols-2 gap-x-16 gap-y-8 w-full">
+
+              <a href="#/cap-01" class="flex items-center gap-6 group no-underline">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
+                  <span class="text-xl font-black text-aulab-yellow">01</span>
                 </div>
-              </div>
+                <span class="text-xl font-bold text-white uppercase tracking-tight">Jira &amp; Filosofia</span>
+              </a>
+
+              <a href="#/cap-02" class="flex items-center gap-6 group no-underline">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-aulab-cyan/5 flex items-center justify-center border border-aulab-cyan/10 group-hover:border-aulab-cyan/40 transition-all duration-500 shrink-0">
+                  <span class="text-xl font-black text-aulab-cyan">02</span>
+                </div>
+                <span class="text-xl font-bold text-white uppercase tracking-tight">Setup &amp; Struttura</span>
+              </a>
+
+              <a href="#/cap-03" class="flex items-center gap-6 group no-underline">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
+                  <span class="text-xl font-black text-aulab-yellow">03</span>
+                </div>
+                <span class="text-xl font-bold text-white uppercase tracking-tight">Logica &amp; Processi</span>
+              </a>
+
+              <a href="#/cap-04" class="flex items-center gap-6 group no-underline">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-aulab-cyan/5 flex items-center justify-center border border-aulab-cyan/10 group-hover:border-aulab-cyan/40 transition-all duration-500 shrink-0">
+                  <span class="text-xl font-black text-aulab-cyan">04</span>
+                </div>
+                <span class="text-xl font-bold text-white uppercase tracking-tight">Gerarchia &amp; Issues</span>
+              </a>
+
+              <a href="#/cap-05" class="flex items-center gap-6 group no-underline">
+                <div
+                  class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
+                  <span class="text-xl font-black text-aulab-yellow">05</span>
+                </div>
+                <span class="text-xl font-bold text-white uppercase tracking-tight">Metriche &amp; Reportistica</span>
+              </a>
+
             </div>
           </div>
-        </section>
 
+        </div>
       </section>
 
 
       <!-- ═══════════════════════════════════════════════
            CAPITOLO 01: FONDAMENTA E FILOSOFIA
       ═══════════════════════════════════════════════ -->
-      <section>
+      <section id="cap-01">
 
         <!-- Cap 01: Section Divider -->
         <section class="section-divider" data-state="is-section-divider">
@@ -157,9 +149,9 @@
               class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(255,237,0,0.12)] border-aulab-yellow/20">
               <i class="fa-solid fa-rocket text-6xl text-aulab-yellow"></i>
             </div>
-            <div class="space-y-2">
-              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">Jira</h1>
-              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Filosofia
+            <div class="flex flex-col gap-2">
+              <h1 class="text-white">Jira</h1>
+              <h1 class="text-white">&amp; Filosofia
               </h1>
             </div>
             <div class="w-24 h-px bg-white/20"></div>
@@ -172,13 +164,10 @@
         <!-- Slide 01.01: Cos'è Jira -->
         <section id="slide-01-01">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.01 &mdash; Cos&apos;&egrave;
-                  Jira</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Overview</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                01.01 &mdash; Cos&apos;&egrave; Jira
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -232,12 +221,10 @@
         <!-- Slide 01.02: Cosa Jira NON è -->
         <section id="slide-01-02">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.02 &mdash; Miti da sfatare</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Philosophy</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                01.02 &mdash; Miti da sfatare
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -281,13 +268,10 @@
         <!-- Slide 01.03: Garante del Processo -->
         <section id="slide-01-03">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.03 &mdash; Il Garante del
-                  Processo</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Management</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                01.03 &mdash; Il Garante del Processo
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -346,12 +330,10 @@
         <!-- Slide 01.04: Il DNA Agile -->
         <section id="slide-01-04">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.04 &mdash; Il DNA Agile</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Methodology</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                01.04 &mdash; Il DNA Agile
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -404,13 +386,10 @@
         <!-- Slide 01.05: Il Modello Mentale -->
         <section id="slide-01-05">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.05 &mdash; Il Modello Mentale
-                </h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Structure</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                01.05 &mdash; Il Modello Mentale
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -442,12 +421,23 @@
                   <i class="fa-solid fa-chevron-right text-white/20 text-2xl shrink-0"></i>
                   <div class="flex flex-col items-center gap-3 text-center">
                     <div
+                      class="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
+                      <i class="fa-solid fa-layer-group text-purple-400 text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="text-white font-black uppercase tracking-tight">Epic</p>
+                      <p class="text-gray-500" style="font-size: 9pt;">Contenitore obiettivo</p>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-chevron-right text-white/20 text-2xl shrink-0"></i>
+                  <div class="flex flex-col items-center gap-3 text-center">
+                    <div
                       class="w-16 h-16 rounded-2xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
                       <i class="fa-solid fa-list-check text-aulab-cyan text-2xl"></i>
                     </div>
                     <div>
                       <p class="text-white font-black uppercase tracking-tight">Work Items</p>
-                      <p class="text-gray-500" style="font-size: 9pt;">Epic &rarr; Story &rarr; Task</p>
+                      <p class="text-gray-500" style="font-size: 9pt;">Story &nbsp;|&nbsp; Task &nbsp;|&nbsp; Bug</p>
                     </div>
                   </div>
                 </div>
@@ -485,9 +475,11 @@
                     </div>
                     <h4 class="text-white font-black uppercase">Work Items</h4>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.8rem;">Le unità di lavoro, in gerarchia: <strong
-                      class="text-purple-400">Epic</strong> &rarr; <strong class="text-green-400">Story</strong> &rarr;
-                    <strong class="text-blue-400">Task</strong> &rarr; Sub-task.</p>
+                  <p class="text-gray-400" style="font-size: 0.8rem;"><strong class="text-white">Epic</strong> &rarr;
+                    <strong class="text-white">Story</strong> | <strong class="text-white">Task</strong> | <strong
+                      class="text-white">Bug</strong> &rarr; <strong class="text-white">Sub-Task</strong>.<br>Story,
+                    Task e Bug sono tipologie diverse allo stesso livello.
+                  </p>
                 </div>
 
               </div>
@@ -499,13 +491,10 @@
         <!-- Slide 01.06: Terminologia -->
         <section id="slide-01-06">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">01.06 &mdash; Evoluzione
-                  Terminologica</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Vocabulary</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                01.06 &mdash; Evoluzione Terminologica
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -544,7 +533,7 @@
       <!-- ═══════════════════════════════════════════════
            CAPITOLO 02: CONFIGURAZIONE E TIPOLOGIE
       ═══════════════════════════════════════════════ -->
-      <section>
+      <section id="cap-02">
 
         <!-- Cap 02: Section Divider -->
         <section class="section-divider" data-state="is-section-divider">
@@ -558,9 +547,9 @@
               class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(56,189,248,0.12)] border-aulab-cyan/20">
               <i class="fa-solid fa-gears text-6xl text-aulab-cyan"></i>
             </div>
-            <div class="space-y-2">
-              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">Setup</h1>
-              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Struttura
+            <div class="flex flex-col gap-2">
+              <h1 class="text-white">Setup</h1>
+              <h1 class="text-white">&amp; Struttura
               </h1>
             </div>
             <div class="w-24 h-px bg-white/20"></div>
@@ -573,13 +562,10 @@
         <!-- Slide 02.01: Anatomia -->
         <section id="slide-02-01">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-cyan"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">02.01 &mdash; Anatomia del Progetto
-                </h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Architecture</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan">
+                02.01 &mdash; Anatomia del Progetto
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -621,12 +607,10 @@
         <!-- Slide 02.02: Team Managed -->
         <section id="slide-02-02">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-cyan"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">02.02 &mdash; Team-Managed</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Structure</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan">
+                02.02 &mdash; Team-Managed
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -674,12 +658,10 @@
         <!-- Slide 02.03: Company Managed -->
         <section id="slide-02-03">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-cyan"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">02.03 &mdash; Company-Managed</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Enterprise</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan">
+                02.03 &mdash; Company-Managed
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -727,13 +709,10 @@
         <!-- Slide 02.04: Team vs Company — Come Scegliere -->
         <section id="slide-02-04">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-cyan"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">02.04 &mdash; Quale Tipologia: Come
-                  Scegliere</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Decision</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan">
+                02.04 &mdash; Quale Tipologia: Come Scegliere
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -792,13 +771,10 @@
         <!-- Slide 02.05: I Template Disponibili -->
         <section id="slide-02-05">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-cyan"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">02.05 &mdash; I Template
-                  Disponibili</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Templates</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan">
+                02.05 &mdash; I Template Disponibili
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -806,7 +782,7 @@
 
                 <div class="col-span-12 glass-card border-l-4 border-aulab-cyan/30 flex flex-col gap-2">
                   <p class="text-gray-400">Alla creazione di un progetto Jira chiede di scegliere un <strong
-                      class="text-white">template</strong>: un punto di partenza che preconfiguriamo workflow, board e
+                      class="text-white">template</strong>: un punto di partenza che preconfigura workflow, board e
                     strumenti. Si può sempre personalizzare in seguito.</p>
                 </div>
 
@@ -862,7 +838,7 @@
       <!-- ═══════════════════════════════════════════════
            CAPITOLO 03: LOGICA E PROCESSI (IL MOTORE)
       ═══════════════════════════════════════════════ -->
-      <section>
+      <section id="cap-03">
 
         <!-- Cap 03: Section Divider -->
         <section class="section-divider" data-state="is-section-divider">
@@ -872,7 +848,8 @@
               <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow">Capitolo 03</span>
               <span class="block w-12 h-px bg-aulab-yellow/40"></span>
             </div>
-            <div class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(255,237,0,0.12)] border-aulab-yellow/20">
+            <div
+              class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(255,237,0,0.12)] border-aulab-yellow/20">
               <i class="fa-solid fa-gears text-6xl text-aulab-yellow"></i>
             </div>
             <div class="flex flex-col gap-2">
@@ -880,7 +857,8 @@
               <h1 class="font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Processi</h1>
             </div>
             <div class="w-24 h-px bg-white/20"></div>
-            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">Come funziona Jira nella pratica quotidiana</p>
+            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">Come funziona Jira nella pratica
+              quotidiana</p>
           </div>
         </section>
 
@@ -888,12 +866,10 @@
         <!-- Slide 03.01: Creare un Progetto -->
         <section id="slide-03-01">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">03.01 &mdash; Creare un Progetto</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">First Steps</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                03.01 &mdash; Creare un Progetto
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -901,37 +877,54 @@
                 <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/50 flex items-center gap-10">
                   <div class="flex flex-col gap-4 flex-1">
                     <h3 class="font-black uppercase">Tre cose che scegli al momento zero</h3>
-                    <p class="text-gray-400" style="font-size: 0.9rem;">Quando clicchi <strong class="text-white">"Crea Progetto"</strong> non serve configurare nulla di tecnico. Solo tre scelte pratiche.</p>
+                    <p class="text-gray-400" style="font-size: 0.9rem;">Quando clicchi <strong class="text-white">"Crea
+                        Progetto"</strong> non serve configurare nulla di tecnico. Solo tre scelte pratiche.</p>
                   </div>
                   <div class="grid grid-cols-3 gap-4 shrink-0" style="width: 56%;">
-                    <div class="flex flex-col items-center text-center gap-3 rounded-xl bg-white/5 border border-white/10" style="padding: 1rem;">
-                      <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
+                    <div
+                      class="flex flex-col items-center text-center gap-3 rounded-xl bg-white/5 border border-white/10"
+                      style="padding: 1rem;">
+                      <div
+                        class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
                         <i class="fa-solid fa-pen-to-square text-aulab-yellow text-lg"></i>
                       </div>
                       <h4 class="text-white font-black uppercase" style="font-size: 0.75rem;">Nome &amp; Chiave</h4>
-                      <p class="text-gray-500" style="font-size: 8pt;">Il nome del progetto e la sigla breve (es. "MKT").</p>
+                      <p class="text-gray-500" style="font-size: 8pt;">Il nome del progetto e la sigla breve (es.
+                        "MKT").</p>
                     </div>
-                    <div class="flex flex-col items-center text-center gap-3 rounded-xl bg-white/5 border border-white/10" style="padding: 1rem;">
-                      <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
+                    <div
+                      class="flex flex-col items-center text-center gap-3 rounded-xl bg-white/5 border border-white/10"
+                      style="padding: 1rem;">
+                      <div
+                        class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
                         <i class="fa-solid fa-diagram-project text-aulab-yellow text-lg"></i>
                       </div>
                       <h4 class="text-white font-black uppercase" style="font-size: 0.75rem;">Tipo di Board</h4>
-                      <p class="text-gray-500" style="font-size: 8pt;">Scrum (sprint fissi) o Kanban (flusso continuo).</p>
+                      <p class="text-gray-500" style="font-size: 8pt;">Scrum (sprint fissi) o Kanban (flusso continuo).
+                      </p>
                     </div>
-                    <div class="flex flex-col items-center text-center gap-3 rounded-xl bg-white/5 border border-white/10" style="padding: 1rem;">
-                      <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
+                    <div
+                      class="flex flex-col items-center text-center gap-3 rounded-xl bg-white/5 border border-white/10"
+                      style="padding: 1rem;">
+                      <div
+                        class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20">
                         <i class="fa-solid fa-user-plus text-aulab-yellow text-lg"></i>
                       </div>
                       <h4 class="text-white font-black uppercase" style="font-size: 0.75rem;">Invita il Team</h4>
-                      <p class="text-gray-500" style="font-size: 8pt;">Aggiungi i membri che lavoreranno sul progetto.</p>
+                      <p class="text-gray-500" style="font-size: 8pt;">Aggiungi i membri che lavoreranno sul progetto.
+                      </p>
                     </div>
                   </div>
                 </div>
-                <div class="col-span-12 glass-card bg-gradient-to-r from-aulab-yellow/5 to-transparent flex items-center gap-5">
-                  <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                <div
+                  class="col-span-12 glass-card bg-gradient-to-r from-aulab-yellow/5 to-transparent flex items-center gap-5">
+                  <div
+                    class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                     <i class="fa-solid fa-circle-check text-aulab-yellow text-base"></i>
                   </div>
-                  <p class="text-gray-300" style="font-size: 0.85rem;">Il resto (workflow, campi, permessi) usa impostazioni predefinite funzionanti. <strong class="text-white">Prima crea il progetto, poi ottimizza.</strong></p>
+                  <p class="text-gray-300" style="font-size: 0.85rem;">Il resto (workflow, campi, permessi) usa
+                    impostazioni predefinite funzionanti. <strong class="text-white">Prima crea il progetto, poi
+                      ottimizza.</strong></p>
                 </div>
               </div>
             </div>
@@ -942,12 +935,10 @@
         <!-- Slide 03.02: Il Workflow -->
         <section id="slide-03-02">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">03.02 &mdash; Il Workflow: La Vita di un Task</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Flow of Work</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                03.02 &mdash; Il Workflow: La Vita di un Task
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -958,50 +949,65 @@
                   <div class="flex flex-col" style="gap: 0;">
                     <div class="flex items-center gap-3">
                       <div class="flex flex-col items-center shrink-0" style="width: 26px;">
-                        <div class="w-6 h-6 rounded-md bg-gray-700/80 border border-white/20 flex items-center justify-center">
+                        <div
+                          class="w-6 h-6 rounded-md bg-gray-700/80 border border-white/20 flex items-center justify-center">
                           <i class="fa-solid fa-circle text-gray-500" style="font-size: 0.35rem;"></i>
                         </div>
                       </div>
-                      <div class="flex-1 flex items-center gap-3 rounded-lg bg-gray-700/50 border border-white/10" style="padding: 0.5rem 0.9rem;">
+                      <div class="flex-1 flex items-center gap-3 rounded-lg bg-gray-700/50 border border-white/10"
+                        style="padding: 0.5rem 0.9rem;">
                         <span class="text-white font-black uppercase" style="font-size: 0.72rem;">To Do</span>
                         <span class="text-white/20">·</span>
                         <span class="text-gray-500" style="font-size: 7.5pt;">Da fare</span>
                       </div>
                     </div>
-                    <div style="padding-left: 11px; height: 12px;"><div style="width: 1px; height: 100%; background: rgba(255,255,255,0.12);"></div></div>
+                    <div style="padding-left: 11px; height: 12px;">
+                      <div style="width: 1px; height: 100%; background: rgba(255,255,255,0.12);"></div>
+                    </div>
                     <div class="flex items-center gap-3">
                       <div class="flex flex-col items-center shrink-0" style="width: 26px;">
-                        <div class="w-6 h-6 rounded-md bg-blue-600/40 border border-blue-500/40 flex items-center justify-center">
+                        <div
+                          class="w-6 h-6 rounded-md bg-blue-600/40 border border-blue-500/40 flex items-center justify-center">
                           <i class="fa-solid fa-circle text-blue-400" style="font-size: 0.35rem;"></i>
                         </div>
                       </div>
-                      <div class="flex-1 flex items-center gap-3 rounded-lg bg-blue-600/20 border border-blue-500/25" style="padding: 0.5rem 0.9rem;">
+                      <div class="flex-1 flex items-center gap-3 rounded-lg bg-blue-600/20 border border-blue-500/25"
+                        style="padding: 0.5rem 0.9rem;">
                         <span class="text-white font-black uppercase" style="font-size: 0.72rem;">In Progress</span>
                         <span class="text-white/20">·</span>
                         <span class="text-gray-500" style="font-size: 7.5pt;">In lavorazione</span>
                       </div>
                     </div>
-                    <div style="padding-left: 11px; height: 12px;"><div style="width: 1px; height: 100%; background: rgba(255,255,255,0.12);"></div></div>
+                    <div style="padding-left: 11px; height: 12px;">
+                      <div style="width: 1px; height: 100%; background: rgba(255,255,255,0.12);"></div>
+                    </div>
                     <div class="flex items-center gap-3">
                       <div class="flex flex-col items-center shrink-0" style="width: 26px;">
-                        <div class="w-6 h-6 rounded-md bg-yellow-500/20 border border-yellow-500/40 flex items-center justify-center">
+                        <div
+                          class="w-6 h-6 rounded-md bg-yellow-500/20 border border-yellow-500/40 flex items-center justify-center">
                           <i class="fa-solid fa-circle text-yellow-500/70" style="font-size: 0.35rem;"></i>
                         </div>
                       </div>
-                      <div class="flex-1 flex items-center gap-3 rounded-lg bg-yellow-500/10 border border-yellow-500/20" style="padding: 0.5rem 0.9rem;">
+                      <div
+                        class="flex-1 flex items-center gap-3 rounded-lg bg-yellow-500/10 border border-yellow-500/20"
+                        style="padding: 0.5rem 0.9rem;">
                         <span class="text-white font-black uppercase" style="font-size: 0.72rem;">In Review</span>
                         <span class="text-white/20">·</span>
                         <span class="text-gray-500" style="font-size: 7.5pt;">Da approvare</span>
                       </div>
                     </div>
-                    <div style="padding-left: 11px; height: 12px;"><div style="width: 1px; height: 100%; background: rgba(255,255,255,0.12);"></div></div>
+                    <div style="padding-left: 11px; height: 12px;">
+                      <div style="width: 1px; height: 100%; background: rgba(255,255,255,0.12);"></div>
+                    </div>
                     <div class="flex items-center gap-3">
                       <div class="flex flex-col items-center shrink-0" style="width: 26px;">
-                        <div class="w-6 h-6 rounded-md bg-green-600/40 border border-green-500/40 flex items-center justify-center">
+                        <div
+                          class="w-6 h-6 rounded-md bg-green-600/40 border border-green-500/40 flex items-center justify-center">
                           <i class="fa-solid fa-check text-green-400" style="font-size: 0.45rem;"></i>
                         </div>
                       </div>
-                      <div class="flex-1 flex items-center gap-3 rounded-lg bg-green-600/20 border border-green-500/25" style="padding: 0.5rem 0.9rem;">
+                      <div class="flex-1 flex items-center gap-3 rounded-lg bg-green-600/20 border border-green-500/25"
+                        style="padding: 0.5rem 0.9rem;">
                         <span class="text-white font-black uppercase" style="font-size: 0.72rem;">Done</span>
                         <span class="text-white/20">·</span>
                         <span class="text-gray-500" style="font-size: 7.5pt;">Completato</span>
@@ -1015,18 +1021,21 @@
                     </div>
                     <div class="flex items-center gap-3 text-gray-400">
                       <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0"></span>
-                      <span><strong class="text-white">Transizione</strong>: spostare un task da uno status all'altro.</span>
+                      <span><strong class="text-white">Transizione</strong>: spostare un task da uno status
+                        all'altro.</span>
                     </div>
                   </div>
                 </div>
                 <div class="col-span-5 flex flex-col gap-5">
                   <div class="glass-card flex-1 border-l-4 border-aulab-yellow/30 flex flex-col gap-3">
                     <h4 class="text-white font-black uppercase" style="font-size: 0.85rem;">Regola d'oro</h4>
-                    <p class="text-gray-400" style="font-size: 0.85rem;">Inizia con <strong class="text-white">3-4 stati</strong>. Un workflow complesso non migliora il lavoro, lo rallenta.</p>
+                    <p class="text-gray-400" style="font-size: 0.85rem;">Inizia con <strong class="text-white">3-4
+                        stati</strong>. Un workflow complesso non migliora il lavoro, lo rallenta.</p>
                   </div>
                   <div class="glass-card flex-1 border-l-4 border-aulab-cyan/30 flex flex-col gap-3">
                     <h4 class="text-white font-black uppercase" style="font-size: 0.85rem;">Il valore reale</h4>
-                    <p class="text-gray-400" style="font-size: 0.85rem;">Guardare la board = capire al volo dove è bloccato il team. Nessuna riunione necessaria.</p>
+                    <p class="text-gray-400" style="font-size: 0.85rem;">Guardare la board = capire al volo dove è
+                      bloccato il team. Nessuna riunione necessaria.</p>
                   </div>
                 </div>
               </div>
@@ -1038,71 +1047,89 @@
         <!-- Slide 03.03: Anatomia di una Issue -->
         <section id="slide-03-03">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">03.03 &mdash; Anatomia di una Issue</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">The Task</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                03.03 &mdash; Anatomia di una Issue
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
               <div class="grid grid-cols-12 gap-5 w-full">
                 <div class="col-span-5 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-4">
                   <h3 class="font-black uppercase">Cosa c'è dentro ogni task?</h3>
-                  <p class="text-gray-400" style="font-size: 0.9rem;">Ogni issue in Jira ha gli stessi <strong class="text-white">campi essenziali</strong>. Conoscerli significa saper leggere qualsiasi progetto.</p>
-                  <div class="flex items-center gap-3 rounded-lg bg-gradient-to-r from-aulab-yellow/10 to-transparent border border-aulab-yellow/20" style="padding: 0.6rem 0.9rem;">
+                  <p class="text-gray-400" style="font-size: 0.9rem;">Ogni issue in Jira ha gli stessi <strong
+                      class="text-white">campi essenziali</strong>. Conoscerli significa saper leggere qualsiasi
+                    progetto.</p>
+                  <div
+                    class="flex items-center gap-3 rounded-lg bg-gradient-to-r from-aulab-yellow/10 to-transparent border border-aulab-yellow/20"
+                    style="padding: 0.6rem 0.9rem;">
                     <i class="fa-solid fa-lightbulb text-aulab-yellow shrink-0" style="font-size: 0.8rem;"></i>
-                    <p class="text-gray-300" style="font-size: 0.78rem;"><strong class="text-white">Buon titolo:</strong> "Creare pagina login con validazione email" — non "Fare login".</p>
+                    <p class="text-gray-300" style="font-size: 0.78rem;"><strong class="text-white">Buon
+                        titolo:</strong> "Creare pagina login con validazione email" — non "Fare login".</p>
                   </div>
                 </div>
                 <div class="col-span-7 glass-card flex flex-col gap-3">
-                  <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.55rem 0.9rem;">
-                    <div class="w-8 h-8 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8"
+                    style="padding: 0.55rem 0.9rem;">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                       <i class="fa-solid fa-heading text-aulab-yellow" style="font-size: 0.75rem;"></i>
                     </div>
                     <div class="flex items-center gap-2 flex-1">
-                      <span class="text-white font-black uppercase" style="font-size: 0.72rem; min-width: 110px;">Titolo</span>
+                      <span class="text-white font-black uppercase"
+                        style="font-size: 0.72rem; min-width: 110px;">Titolo</span>
                       <span class="text-white/15">·</span>
                       <span class="text-gray-500" style="font-size: 8pt;">Cosa deve essere fatto.</span>
                     </div>
                   </div>
-                  <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.55rem 0.9rem;">
-                    <div class="w-8 h-8 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8"
+                    style="padding: 0.55rem 0.9rem;">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                       <i class="fa-solid fa-align-left text-aulab-yellow" style="font-size: 0.75rem;"></i>
                     </div>
                     <div class="flex items-center gap-2 flex-1">
-                      <span class="text-white font-black uppercase" style="font-size: 0.72rem; min-width: 110px;">Descrizione</span>
+                      <span class="text-white font-black uppercase"
+                        style="font-size: 0.72rem; min-width: 110px;">Descrizione</span>
                       <span class="text-white/15">·</span>
                       <span class="text-gray-500" style="font-size: 8pt;">Dettagli e criteri di accettazione.</span>
                     </div>
                   </div>
-                  <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.55rem 0.9rem;">
-                    <div class="w-8 h-8 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8"
+                    style="padding: 0.55rem 0.9rem;">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                       <i class="fa-solid fa-user-check text-aulab-yellow" style="font-size: 0.75rem;"></i>
                     </div>
                     <div class="flex items-center gap-2 flex-1">
-                      <span class="text-white font-black uppercase" style="font-size: 0.72rem; min-width: 110px;">Assegnatario</span>
+                      <span class="text-white font-black uppercase"
+                        style="font-size: 0.72rem; min-width: 110px;">Assegnatario</span>
                       <span class="text-white/15">·</span>
                       <span class="text-gray-500" style="font-size: 8pt;">Chi esegue il lavoro.</span>
                     </div>
                   </div>
-                  <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.55rem 0.9rem;">
-                    <div class="w-8 h-8 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8"
+                    style="padding: 0.55rem 0.9rem;">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                       <i class="fa-solid fa-triangle-exclamation text-aulab-yellow" style="font-size: 0.75rem;"></i>
                     </div>
                     <div class="flex items-center gap-2 flex-1">
-                      <span class="text-white font-black uppercase" style="font-size: 0.72rem; min-width: 110px;">Priorità</span>
+                      <span class="text-white font-black uppercase"
+                        style="font-size: 0.72rem; min-width: 110px;">Priorità</span>
                       <span class="text-white/15">·</span>
                       <span class="text-gray-500" style="font-size: 8pt;">Urgente, alta, media, bassa.</span>
                     </div>
                   </div>
-                  <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.55rem 0.9rem;">
-                    <div class="w-8 h-8 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8"
+                    style="padding: 0.55rem 0.9rem;">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                       <i class="fa-solid fa-circle-half-stroke text-aulab-yellow" style="font-size: 0.75rem;"></i>
                     </div>
                     <div class="flex items-center gap-2 flex-1">
-                      <span class="text-white font-black uppercase" style="font-size: 0.72rem; min-width: 110px;">Stato</span>
+                      <span class="text-white font-black uppercase"
+                        style="font-size: 0.72rem; min-width: 110px;">Stato</span>
                       <span class="text-white/15">·</span>
                       <span class="text-gray-500" style="font-size: 8pt;">Dove si trova nel workflow.</span>
                     </div>
@@ -1117,51 +1144,59 @@
         <!-- Slide 03.04: Chi fa cosa -->
         <section id="slide-03-04">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">03.04 &mdash; Chi Fa Cosa</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Roles</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                03.04 &mdash; Chi Fa Cosa
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
               <div class="grid grid-cols-12 gap-5 w-full">
                 <div class="col-span-4 glass-card flex flex-col gap-4">
                   <div class="flex items-center gap-4">
-                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                       <i class="fa-solid fa-user-check text-aulab-yellow text-lg"></i>
                     </div>
                     <h3 class="font-black uppercase">Assignee</h3>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Chi esegue il lavoro.</strong> La persona responsabile di portare il task a "Done".</p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Chi esegue il
+                      lavoro.</strong> La persona responsabile di portare il task a "Done".</p>
                   <p class="text-gray-600 italic" style="font-size: 8pt;">"Mario sta lavorando su questa issue."</p>
                 </div>
                 <div class="col-span-4 glass-card flex flex-col gap-4">
                   <div class="flex items-center gap-4">
-                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
                       <i class="fa-solid fa-file-pen text-aulab-cyan text-lg"></i>
                     </div>
                     <h3 class="font-black uppercase">Reporter</h3>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Chi ha creato il task.</strong> Di solito il PM o chi ha identificato il bisogno.</p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Chi ha creato il
+                      task.</strong> Di solito il PM o chi ha identificato il bisogno.</p>
                   <p class="text-gray-600 italic" style="font-size: 8pt;">"Sara ha aperto questa issue."</p>
                 </div>
                 <div class="col-span-4 glass-card flex flex-col gap-4">
                   <div class="flex items-center gap-4">
-                    <div class="w-11 h-11 rounded-xl bg-white/[0.06] flex items-center justify-center border border-white/15 shrink-0">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-white/[0.06] flex items-center justify-center border border-white/15 shrink-0">
                       <i class="fa-solid fa-eye text-gray-400 text-lg"></i>
                     </div>
                     <h3 class="font-black uppercase">Watcher</h3>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Chi vuole restare aggiornato.</strong> Segue l'avanzamento ma non lavora direttamente sul task.</p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Chi vuole restare
+                      aggiornato.</strong> Segue l'avanzamento ma non lavora direttamente sul task.</p>
                   <p class="text-gray-600 italic" style="font-size: 8pt;">"Il cliente segue i progressi."</p>
                 </div>
-                <div class="col-span-12 glass-card bg-gradient-to-r from-aulab-yellow/5 to-transparent flex items-center gap-5">
-                  <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                <div
+                  class="col-span-12 glass-card bg-gradient-to-r from-aulab-yellow/5 to-transparent flex items-center gap-5">
+                  <div
+                    class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                     <i class="fa-solid fa-circle-exclamation text-aulab-yellow text-base"></i>
                   </div>
-                  <p class="text-gray-300" style="font-size: 0.85rem;"><strong class="text-white">Regola pratica:</strong> ogni task deve avere un Assignee. Un task senza responsabile non verrà mai completato.</p>
+                  <p class="text-gray-300" style="font-size: 0.85rem;"><strong class="text-white">Regola
+                      pratica:</strong> ogni task deve avere un Assignee. Un task senza responsabile non verrà mai
+                    completato.</p>
                 </div>
               </div>
             </div>
@@ -1175,7 +1210,7 @@
       <!-- ═══════════════════════════════════════════════
            CAPITOLO 04: GERARCHIA ED ISSUE TYPES
       ═══════════════════════════════════════════════ -->
-      <section>
+      <section id="cap-04">
 
         <!-- Cap 04: Section Divider -->
         <section class="section-divider" data-state="is-section-divider">
@@ -1189,9 +1224,9 @@
               class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(56,189,248,0.12)] border-aulab-cyan/20">
               <i class="fa-solid fa-layer-group text-6xl text-aulab-cyan"></i>
             </div>
-            <div class="space-y-2">
-              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">Gerarchia</h1>
-              <h1 class="text-[7.5rem] font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Issues
+            <div class="flex flex-col gap-2">
+              <h1 class="text-white">Gerarchia</h1>
+              <h1 class="text-white">&amp; Issues
               </h1>
             </div>
             <div class="w-24 h-px bg-white/20"></div>
@@ -1204,13 +1239,10 @@
         <!-- Slide 04.01: La Piramide -->
         <section id="slide-04-01">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-cyan"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">04.01 &mdash; La Piramide del
-                  Lavoro</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Hierarchy</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan">
+                04.01 &mdash; La Piramide del Lavoro
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -1238,7 +1270,7 @@
                         <i class="fa-solid fa-file-lines text-blue-400"></i>
                       </div>
                       <div class="flex flex-col gap-2">
-                        <h4 class="text-white uppercase">Story / Task</h4>
+                        <h4 class="text-white uppercase">Story / Task / Bug</h4>
                         <p class="text-gray-400 italic" style="font-size: 9pt;">"Aggiungere prodotti al carrello"</p>
                         <p class="text-gray-500" style="font-size: 8pt;">Unità di valore o lavoro tecnico completabile
                           in uno sprint.</p>
@@ -1269,12 +1301,10 @@
         <!-- Slide 04.02: User Story -->
         <section id="slide-04-02">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-cyan"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">04.02 &mdash; User Story</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Requirements</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan">
+                04.02 &mdash; User Story
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -1284,39 +1314,54 @@
                   <h3 class="font-black uppercase">Il formato standard</h3>
 
                   <div class="flex flex-col gap-2">
-                    <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.6rem 0.9rem;">
-                      <span class="rounded font-black uppercase text-aulab-yellow shrink-0" style="font-size: 0.7rem; min-width: 72px;">As a</span>
+                    <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8"
+                      style="padding: 0.6rem 0.9rem;">
+                      <span class="rounded font-black uppercase text-aulab-yellow shrink-0"
+                        style="font-size: 0.7rem; min-width: 72px;">As a</span>
                       <span class="w-px h-4 bg-white/15 shrink-0"></span>
-                      <span class="text-gray-400" style="font-size: 0.85rem;">Come <span class="text-white">[Utente / Persona]</span></span>
+                      <span class="text-gray-400" style="font-size: 0.85rem;">Come <span class="text-white">[Utente /
+                          Persona]</span></span>
                     </div>
-                    <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.6rem 0.9rem;">
-                      <span class="rounded font-black uppercase text-aulab-yellow shrink-0" style="font-size: 0.7rem; min-width: 72px;">I want to</span>
+                    <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8"
+                      style="padding: 0.6rem 0.9rem;">
+                      <span class="rounded font-black uppercase text-aulab-yellow shrink-0"
+                        style="font-size: 0.7rem; min-width: 72px;">I want to</span>
                       <span class="w-px h-4 bg-white/15 shrink-0"></span>
-                      <span class="text-gray-400" style="font-size: 0.85rem;">Voglio <span class="text-white">[Azione / Funzionalità]</span></span>
+                      <span class="text-gray-400" style="font-size: 0.85rem;">Voglio <span class="text-white">[Azione /
+                          Funzionalità]</span></span>
                     </div>
-                    <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.6rem 0.9rem;">
-                      <span class="rounded font-black uppercase text-aulab-yellow shrink-0" style="font-size: 0.7rem; min-width: 72px;">So that</span>
+                    <div class="flex items-center gap-4 rounded-lg bg-white/[0.03] border border-white/8"
+                      style="padding: 0.6rem 0.9rem;">
+                      <span class="rounded font-black uppercase text-aulab-yellow shrink-0"
+                        style="font-size: 0.7rem; min-width: 72px;">So that</span>
                       <span class="w-px h-4 bg-white/15 shrink-0"></span>
-                      <span class="text-gray-400" style="font-size: 0.85rem;">In modo da <span class="text-white">[Valore / Beneficio]</span></span>
+                      <span class="text-gray-400" style="font-size: 0.85rem;">In modo da <span
+                          class="text-white">[Valore / Beneficio]</span></span>
                     </div>
                   </div>
 
-                  <div class="rounded-xl border border-aulab-cyan/20 bg-aulab-cyan/5 flex flex-col gap-2" style="padding: 0.8rem 1rem;">
-                    <span class="text-aulab-cyan font-black uppercase" style="font-size: 0.65rem; letter-spacing: 0.2em;">Esempio</span>
+                  <div class="rounded-xl border border-aulab-cyan/20 bg-aulab-cyan/5 flex flex-col gap-2"
+                    style="padding: 0.8rem 1rem;">
+                    <span class="text-aulab-cyan font-black uppercase"
+                      style="font-size: 0.65rem; letter-spacing: 0.2em;">Esempio</span>
                     <p class="text-gray-300" style="font-size: 0.85rem; line-height: 1.6;">
-                      "Come <strong class="text-white">cliente</strong>, voglio <strong class="text-white">aggiungere prodotti al carrello</strong>, in modo da <strong class="text-white">acquistarli in un'unica transazione</strong>."
+                      "Come <strong class="text-white">cliente</strong>, voglio <strong class="text-white">aggiungere
+                        prodotti al carrello</strong>, in modo da <strong class="text-white">acquistarli in un'unica
+                        transazione</strong>."
                     </p>
                   </div>
                 </div>
 
                 <div class="col-span-5 glass-card border-l-4 border-aulab-cyan/30 flex flex-col gap-5">
                   <div class="flex items-center gap-4">
-                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
                       <i class="fa-solid fa-check-double text-aulab-cyan text-lg"></i>
                     </div>
                     <h3 class="font-black uppercase">Acceptance Criteria</h3>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.85rem;">La lista di condizioni che devono essere soddisfatte perché la story sia "Done".</p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;">La lista di condizioni che devono essere
+                    soddisfatte perché la story sia "Done".</p>
                   <div class="flex flex-col gap-2">
                     <div class="flex items-center gap-3 text-gray-400" style="font-size: 0.82rem;">
                       <i class="fa-regular fa-square-check text-aulab-cyan shrink-0"></i>
@@ -1331,7 +1376,8 @@
                       <span>Prodotto non disponibile → messaggio errore</span>
                     </div>
                   </div>
-                  <p class="text-gray-600 italic" style="font-size: 8pt;">Se tutti i criteri sono soddisfatti, il task è Done. Niente ambiguità.</p>
+                  <p class="text-gray-600 italic" style="font-size: 8pt;">Se tutti i criteri sono soddisfatti, il task è
+                    Done. Niente ambiguità.</p>
                 </div>
 
               </div>
@@ -1343,12 +1389,10 @@
         <!-- Slide 04.03: Quando usare quale tipo -->
         <section id="slide-04-03">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-cyan"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">04.03 &mdash; Quando Usare Quale Tipo</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-cyan/60">Issue Types</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan">
+                04.03 &mdash; Quando Usare Quale Tipo
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -1356,53 +1400,65 @@
 
                 <div class="col-span-3 glass-card flex flex-col gap-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-11 h-11 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
                       <i class="fa-solid fa-bolt text-purple-400 text-lg"></i>
                     </div>
                     <h3 class="font-black uppercase text-purple-200">Epic</h3>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.85rem;">Un grande obiettivo che raggruppa più storie. Dura settimane o mesi.</p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;">Un grande obiettivo che raggruppa più storie.
+                    Dura settimane o mesi.</p>
                   <p class="text-gray-600 italic" style="font-size: 8pt;">"Realizzare il checkout dell'e-commerce"</p>
                 </div>
 
                 <div class="col-span-3 glass-card flex flex-col gap-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20 shrink-0">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20 shrink-0">
                       <i class="fa-solid fa-user text-blue-400 text-lg"></i>
                     </div>
                     <h3 class="font-black uppercase text-blue-200">Story</h3>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.85rem;">Una funzionalità vista dal punto di vista dell'utente. Formato: "Come utente, voglio…"</p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;">Una funzionalità vista dal punto di vista
+                    dell'utente. Formato: "Come utente, voglio…"</p>
                   <p class="text-gray-600 italic" style="font-size: 8pt;">"Aggiungere un prodotto al carrello"</p>
                 </div>
 
                 <div class="col-span-3 glass-card flex flex-col gap-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
                       <i class="fa-solid fa-list-check text-aulab-cyan text-lg"></i>
                     </div>
                     <h3 class="font-black uppercase text-aulab-cyan">Task</h3>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.85rem;">Lavoro tecnico o operativo che non porta valore diretto all'utente.</p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;">Lavoro tecnico o operativo che non porta valore
+                    diretto all'utente.</p>
                   <p class="text-gray-600 italic" style="font-size: 8pt;">"Aggiornare le dipendenze del progetto"</p>
                 </div>
 
                 <div class="col-span-3 glass-card flex flex-col gap-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20 shrink-0">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20 shrink-0">
                       <i class="fa-solid fa-bug text-red-400 text-lg"></i>
                     </div>
                     <h3 class="font-black uppercase text-red-300">Bug</h3>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.85rem;">Qualcosa che non funziona come previsto. Non una nuova funzione, ma un errore da correggere.</p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;">Qualcosa che non funziona come previsto. Non una
+                    nuova funzione, ma un errore da correggere.</p>
                   <p class="text-gray-600 italic" style="font-size: 8pt;">"Il pagamento fallisce su mobile"</p>
                 </div>
 
-                <div class="col-span-12 glass-card bg-gradient-to-r from-aulab-cyan/5 to-transparent flex items-center gap-5">
-                  <div class="w-9 h-9 rounded-lg bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                <div
+                  class="col-span-12 glass-card bg-gradient-to-r from-aulab-cyan/5 to-transparent flex items-center gap-5">
+                  <div
+                    class="w-9 h-9 rounded-lg bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
                     <i class="fa-solid fa-lightbulb text-aulab-cyan text-base"></i>
                   </div>
-                  <p class="text-gray-300" style="font-size: 0.85rem;">Nel dubbio, usa <strong class="text-white">Story</strong> per tutto ciò che porta valore all'utente e <strong class="text-white">Task</strong> per tutto il resto. Il tipo si può sempre cambiare dopo.</p>
+                  <p class="text-gray-300" style="font-size: 0.85rem;">Nel dubbio, usa <strong
+                      class="text-white">Story</strong> per tutto ciò che porta valore all'utente e <strong
+                      class="text-white">Task</strong> per tutto il resto. Il tipo si può sempre cambiare dopo.</p>
                 </div>
 
               </div>
@@ -1416,7 +1472,7 @@
       <!-- ═══════════════════════════════════════════════
            CAPITOLO 05: METRICHE E REPORTISTICA
       ═══════════════════════════════════════════════ -->
-      <section>
+      <section id="cap-05">
 
         <!-- Cap 05: Section Divider -->
         <section class="section-divider" data-state="is-section-divider">
@@ -1426,7 +1482,8 @@
               <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow">Capitolo 05</span>
               <span class="block w-12 h-px bg-aulab-yellow/40"></span>
             </div>
-            <div class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(255,237,0,0.12)] border-aulab-yellow/20">
+            <div
+              class="p-8 rounded-3xl bg-white/[0.04] border border-white/10 shadow-[0_0_80px_rgba(255,237,0,0.12)] border-aulab-yellow/20">
               <i class="fa-solid fa-chart-line text-6xl text-aulab-yellow"></i>
             </div>
             <div class="flex flex-col gap-2">
@@ -1434,7 +1491,8 @@
               <h1 class="font-black tracking-[-0.05em] text-white leading-none uppercase">&amp; Reportistica</h1>
             </div>
             <div class="w-24 h-px bg-white/20"></div>
-            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">Cosa Jira ti mostra per tenere il progetto sotto controllo</p>
+            <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">Cosa Jira ti mostra per tenere il
+              progetto sotto controllo</p>
           </div>
         </section>
 
@@ -1442,12 +1500,10 @@
         <!-- Slide 05.01: La Dashboard -->
         <section id="slide-05-01">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.01 &mdash; La Dashboard</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Overview</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                05.01 &mdash; La Dashboard
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -1455,7 +1511,9 @@
 
                 <div class="col-span-5 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
                   <h3 class="font-black uppercase">La home del PM</h3>
-                  <p class="text-gray-400" style="font-size: 0.9rem;">La Dashboard è la pagina di partenza in Jira. Mostra in un colpo d'occhio lo stato del progetto tramite <strong class="text-white">widget personalizzabili</strong>.</p>
+                  <p class="text-gray-400" style="font-size: 0.9rem;">La Dashboard è la pagina di partenza in Jira.
+                    Mostra in un colpo d'occhio lo stato del progetto tramite <strong class="text-white">widget
+                      personalizzabili</strong>.</p>
                   <div class="flex flex-col gap-2" style="font-size: 0.85rem;">
                     <div class="flex items-center gap-3 text-gray-400">
                       <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0"></span>
@@ -1463,11 +1521,13 @@
                     </div>
                     <div class="flex items-center gap-3 text-gray-400">
                       <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0"></span>
-                      <span>Ogni widget si <strong class="text-white">configura in autonomia</strong> — mostri solo ciò che ti serve.</span>
+                      <span>Ogni widget si <strong class="text-white">configura in autonomia</strong> — mostri solo ciò
+                        che ti serve.</span>
                     </div>
                     <div class="flex items-center gap-3 text-gray-400">
                       <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0"></span>
-                      <span>Si aggiorna in <strong class="text-white">tempo reale</strong> man mano che il team lavora.</span>
+                      <span>Si aggiorna in <strong class="text-white">tempo reale</strong> man mano che il team
+                        lavora.</span>
                     </div>
                   </div>
                 </div>
@@ -1475,25 +1535,30 @@
                 <div class="col-span-7 grid grid-cols-2 gap-4">
                   <div class="glass-card flex flex-col gap-3">
                     <div class="flex items-center gap-3">
-                      <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <div
+                        class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                         <i class="fa-solid fa-chart-pie text-aulab-yellow text-sm"></i>
                       </div>
                       <h4 class="text-white font-black uppercase" style="font-size: 0.75rem;">Issue Statistics</h4>
                     </div>
-                    <p class="text-gray-500" style="font-size: 8pt;">Distribuzione delle issue per stato, priorità o assegnatario.</p>
+                    <p class="text-gray-500" style="font-size: 8pt;">Distribuzione delle issue per stato, priorità o
+                      assegnatario.</p>
                   </div>
                   <div class="glass-card flex flex-col gap-3">
                     <div class="flex items-center gap-3">
-                      <div class="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20 shrink-0">
+                      <div
+                        class="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center border border-blue-500/20 shrink-0">
                         <i class="fa-solid fa-list text-blue-400 text-sm"></i>
                       </div>
                       <h4 class="text-white font-black uppercase" style="font-size: 0.75rem;">Issue Navigator</h4>
                     </div>
-                    <p class="text-gray-500" style="font-size: 8pt;">Lista filtrata di issue direttamente nella dashboard.</p>
+                    <p class="text-gray-500" style="font-size: 8pt;">Lista filtrata di issue direttamente nella
+                      dashboard.</p>
                   </div>
                   <div class="glass-card flex flex-col gap-3">
                     <div class="flex items-center gap-3">
-                      <div class="w-9 h-9 rounded-lg bg-green-500/10 flex items-center justify-center border border-green-500/20 shrink-0">
+                      <div
+                        class="w-9 h-9 rounded-lg bg-green-500/10 flex items-center justify-center border border-green-500/20 shrink-0">
                         <i class="fa-solid fa-user-clock text-green-400 text-sm"></i>
                       </div>
                       <h4 class="text-white font-black uppercase" style="font-size: 0.75rem;">Assigned to Me</h4>
@@ -1502,7 +1567,8 @@
                   </div>
                   <div class="glass-card flex flex-col gap-3">
                     <div class="flex items-center gap-3">
-                      <div class="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
+                      <div
+                        class="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
                         <i class="fa-solid fa-clock-rotate-left text-purple-400 text-sm"></i>
                       </div>
                       <h4 class="text-white font-black uppercase" style="font-size: 0.75rem;">Activity Stream</h4>
@@ -1520,52 +1586,74 @@
         <!-- Slide 05.02: I Report Built-in -->
         <section id="slide-05-02">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.02 &mdash; I Report Built-in</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Reports</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                05.02 &mdash; I Report Built-in
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
               <div class="grid grid-cols-12 gap-5 w-full">
 
                 <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/50 flex items-center gap-5">
-                  <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <div
+                    class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                     <i class="fa-solid fa-wand-magic-sparkles text-aulab-yellow text-sm"></i>
                   </div>
-                  <p class="text-gray-300" style="font-size: 0.88rem;">Jira genera questi report <strong class="text-white">automaticamente</strong>. Non richiedono configurazione: bastano issue aggiornate e uno sprint attivo.</p>
+                  <p class="text-gray-300" style="font-size: 0.88rem;">Jira genera questi report <strong
+                      class="text-white">automaticamente</strong>. Non richiedono configurazione: bastano issue
+                    aggiornate e uno sprint attivo.</p>
                 </div>
 
-                <div class="col-span-4 glass-card flex flex-col gap-4">
+                <div class="col-span-6 glass-card flex flex-col gap-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20 shrink-0">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20 shrink-0">
                       <i class="fa-solid fa-arrow-trend-down text-red-400 text-lg"></i>
                     </div>
                     <h3 class="font-black uppercase">Burndown Chart</h3>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Quanto lavoro resta</strong> rispetto ai giorni rimasti. La linea reale vs la linea ideale: sei in ritardo o in anticipo?</p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Quanto lavoro
+                      resta</strong> rispetto ai giorni rimasti. La linea reale vs la linea ideale: sei in ritardo o in
+                    anticipo?</p>
                 </div>
 
-                <div class="col-span-4 glass-card flex flex-col gap-4">
+                <div class="col-span-6 glass-card flex flex-col gap-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                       <i class="fa-solid fa-chart-bar text-aulab-yellow text-lg"></i>
                     </div>
                     <h3 class="font-black uppercase">Sprint Report</h3>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Cosa è stato completato</strong> e cosa è rimasto fuori a fine sprint. La base per la review con gli stakeholder.</p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Cosa è stato
+                      completato</strong> e cosa è rimasto fuori a fine sprint. La base per la review con gli
+                    stakeholder.</p>
                 </div>
 
-                <div class="col-span-4 glass-card flex flex-col gap-4">
+                <div class="col-span-6 glass-card flex flex-col gap-4">
                   <div class="flex items-center gap-3">
-                    <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
                       <i class="fa-solid fa-wave-square text-aulab-cyan text-lg"></i>
                     </div>
                     <h3 class="font-black uppercase">Cumulative Flow</h3>
                   </div>
-                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Dove si accumula il lavoro</strong> nel workflow. Se una colonna cresce, c'è un collo di bottiglia da risolvere.</p>
+                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Dove si accumula il
+                      lavoro</strong> nel workflow. Se una colonna cresce, c'è un collo di bottiglia da risolvere.</p>
+                </div>
+
+                <div class="col-span-6 glass-card flex flex-col gap-4">
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-11 h-11 rounded-xl bg-green-500/10 flex items-center justify-center border border-green-500/20 shrink-0">
+                      <i class="fa-solid fa-gauge-high text-green-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-black uppercase">Velocity Chart</h3>
+                  </div>
+                  <p class="text-gray-400" style="font-size: 0.85rem;"><strong class="text-white">Quanti story point
+                      completa il team</strong> sprint dopo sprint. Fondamentale per stimare la capacità futura e
+                    pianificare i rilasci.</p>
                 </div>
 
               </div>
@@ -1577,12 +1665,10 @@
         <!-- Slide 05.03: Filtri -->
         <section id="slide-05-03">
           <div class="flex flex-col h-full">
-            <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-8 bg-aulab-yellow"></span>
-                <h2 class="text-2xl font-black uppercase tracking-widest text-white">05.03 &mdash; Filtri</h2>
-              </div>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Search & Filter</span>
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                05.03 &mdash; Filtri
+              </span>
             </div>
 
             <div class="flex-1 flex items-center">
@@ -1590,16 +1676,26 @@
 
                 <div class="col-span-5 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
                   <h3 class="font-black uppercase">Interrogare il progetto</h3>
-                  <p class="text-gray-400" style="font-size: 0.9rem;">I filtri permettono di <strong class="text-white">creare viste personalizzate</strong> del backlog. Utile per trovare subito ciò che serve senza scorrere centinaia di issue.</p>
-                  <div class="rounded-xl bg-aulab-yellow/5 border border-aulab-yellow/15 flex flex-col gap-2" style="padding: 0.8rem 1rem;">
-                    <p class="text-aulab-yellow font-black uppercase" style="font-size: 0.68rem; letter-spacing: 0.2em;">Filtri base</p>
+                  <p class="text-gray-400" style="font-size: 0.9rem;">I filtri permettono di <strong
+                      class="text-white">creare viste personalizzate</strong> del backlog. Utile per trovare subito ciò
+                    che serve senza scorrere centinaia di issue.</p>
+                  <div class="rounded-xl bg-aulab-yellow/5 border border-aulab-yellow/15 flex flex-col gap-2"
+                    style="padding: 0.8rem 1rem;">
+                    <p class="text-aulab-yellow font-black uppercase"
+                      style="font-size: 0.68rem; letter-spacing: 0.2em;">Filtri base</p>
                     <div class="flex flex-wrap gap-2">
-                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Assegnatario</span>
-                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Stato</span>
-                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Priorità</span>
-                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Tipo issue</span>
-                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Epic</span>
-                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold" style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Sprint</span>
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold"
+                        style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Assegnatario</span>
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold"
+                        style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Stato</span>
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold"
+                        style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Priorità</span>
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold"
+                        style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Tipo issue</span>
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold"
+                        style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Epic</span>
+                      <span class="rounded-full bg-white/10 border border-white/15 text-gray-300 font-bold"
+                        style="font-size: 7.5pt; padding: 0.2rem 0.6rem;">Sprint</span>
                     </div>
                   </div>
                 </div>
@@ -1607,30 +1703,38 @@
                 <div class="col-span-7 flex flex-col gap-4">
                   <div class="glass-card flex flex-col gap-3">
                     <div class="flex items-center gap-3">
-                      <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                      <div
+                        class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
                         <i class="fa-solid fa-floppy-disk text-aulab-yellow text-sm"></i>
                       </div>
                       <h4 class="text-white font-black uppercase" style="font-size: 0.78rem;">Filtri salvati</h4>
                     </div>
-                    <p class="text-gray-400" style="font-size: 0.83rem;">Crea una volta, riusa sempre. Es: <span class="text-white">"Bug aperti ad alta priorità"</span> o <span class="text-white">"Tutto ciò che è bloccato"</span>.</p>
+                    <p class="text-gray-400" style="font-size: 0.83rem;">Crea una volta, riusa sempre. Es: <span
+                        class="text-white">"Bug aperti ad alta priorità"</span> o <span class="text-white">"Tutto ciò
+                        che è bloccato"</span>.</p>
                   </div>
                   <div class="glass-card flex flex-col gap-3">
                     <div class="flex items-center gap-3">
-                      <div class="w-9 h-9 rounded-lg bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                      <div
+                        class="w-9 h-9 rounded-lg bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
                         <i class="fa-solid fa-table-columns text-aulab-cyan text-sm"></i>
                       </div>
                       <h4 class="text-white font-black uppercase" style="font-size: 0.78rem;">Board personalizzata</h4>
                     </div>
-                    <p class="text-gray-400" style="font-size: 0.83rem;">Un filtro salvato può diventare una <strong class="text-white">board dedicata</strong>. Utile per avere una vista separata per ogni team o area.</p>
+                    <p class="text-gray-400" style="font-size: 0.83rem;">Un filtro salvato può diventare una <strong
+                        class="text-white">board dedicata</strong>. Utile per avere una vista separata per ogni team o
+                      area.</p>
                   </div>
                   <div class="glass-card flex flex-col gap-3">
                     <div class="flex items-center gap-3">
-                      <div class="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
+                      <div
+                        class="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
                         <i class="fa-solid fa-code text-purple-400 text-sm"></i>
                       </div>
                       <h4 class="text-white font-black uppercase" style="font-size: 0.78rem;">JQL</h4>
                     </div>
-                    <p class="text-gray-400" style="font-size: 0.83rem;">Jira Query Language: per chi vuole filtri avanzati. Non è necessario all'inizio, ma è potente per report complessi.</p>
+                    <p class="text-gray-400" style="font-size: 0.83rem;">Jira Query Language: per chi vuole filtri
+                      avanzati. Non è necessario all'inizio, ma è potente per report complessi.</p>
                   </div>
                 </div>
 
@@ -1645,228 +1749,284 @@
            SLIDE FINALE: LAB — CREIAMO IL PROGETTO
       ═══════════════════════════════════════════════ -->
       <section>
-      <section id="slide-lab">
-        <div class="flex flex-col h-full">
-          <div class="slide-header flex items-center justify-between w-full border-b border-white/10">
-            <div class="flex items-center gap-3">
-              <span class="w-2 h-8 bg-aulab-yellow"></span>
-              <h2 class="text-2xl font-black uppercase tracking-widest text-white">Lab &mdash; Creiamo il Progetto</h2>
+        <section id="slide-lab">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
+                Lab &mdash; Creiamo il Progetto
+              </span>
             </div>
-            <span class="text-xs font-bold uppercase tracking-[0.3em] text-aulab-yellow/60">Hands-on</span>
-          </div>
 
-          <div class="flex-1 flex items-center">
-            <div class="grid grid-cols-12 gap-5 w-full">
+            <div class="flex-1 flex items-center">
+              <div class="grid grid-cols-12 gap-5 w-full">
 
-              <!-- Steps -->
-              <div class="col-span-5 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
-                <h3 class="font-black uppercase">Come procediamo</h3>
-                <div class="flex flex-col gap-4">
-                  <div class="flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-lg bg-aulab-yellow/10 border border-aulab-yellow/30 flex items-center justify-center shrink-0">
-                      <span class="text-aulab-yellow font-black" style="font-size: 0.75rem;">1</span>
+                <!-- Steps -->
+                <div class="col-span-5 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
+                  <h3 class="font-black uppercase">Come procediamo</h3>
+                  <div class="flex flex-col gap-4">
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-aulab-yellow/10 border border-aulab-yellow/30 flex items-center justify-center shrink-0">
+                        <span class="text-aulab-yellow font-black" style="font-size: 0.75rem;">1</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <p class="text-white font-black uppercase" style="font-size: 0.75rem;">Genera il brief</p>
+                        <p class="text-gray-400" style="font-size: 0.82rem;">Usa il prompt ChatGPT per ottenere un
+                          progetto simulato con Epic, Story e Task.</p>
+                      </div>
                     </div>
-                    <div class="flex flex-col gap-1">
-                      <p class="text-white font-black uppercase" style="font-size: 0.75rem;">Genera il brief</p>
-                      <p class="text-gray-400" style="font-size: 0.82rem;">Usa il prompt ChatGPT per ottenere un progetto simulato con Epic, Story e Task.</p>
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-aulab-yellow/10 border border-aulab-yellow/30 flex items-center justify-center shrink-0">
+                        <span class="text-aulab-yellow font-black" style="font-size: 0.75rem;">2</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <p class="text-white font-black uppercase" style="font-size: 0.75rem;">Crea il progetto Scrum
+                        </p>
+                        <p class="text-gray-400" style="font-size: 0.82rem;">Nuovo progetto in Jira, tipo Scrum. Nome,
+                          chiave, invita il team.</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-lg bg-aulab-yellow/10 border border-aulab-yellow/30 flex items-center justify-center shrink-0">
-                      <span class="text-aulab-yellow font-black" style="font-size: 0.75rem;">2</span>
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-aulab-yellow/10 border border-aulab-yellow/30 flex items-center justify-center shrink-0">
+                        <span class="text-aulab-yellow font-black" style="font-size: 0.75rem;">3</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <p class="text-white font-black uppercase" style="font-size: 0.75rem;">Popola il backlog</p>
+                        <p class="text-gray-400" style="font-size: 0.82rem;">Crea Epic, Story, Task e Sub-task seguendo
+                          la struttura generata.</p>
+                      </div>
                     </div>
-                    <div class="flex flex-col gap-1">
-                      <p class="text-white font-black uppercase" style="font-size: 0.75rem;">Crea il progetto Scrum</p>
-                      <p class="text-gray-400" style="font-size: 0.82rem;">Nuovo progetto in Jira, tipo Scrum. Nome, chiave, invita il team.</p>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-lg bg-aulab-yellow/10 border border-aulab-yellow/30 flex items-center justify-center shrink-0">
-                      <span class="text-aulab-yellow font-black" style="font-size: 0.75rem;">3</span>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                      <p class="text-white font-black uppercase" style="font-size: 0.75rem;">Popola il backlog</p>
-                      <p class="text-gray-400" style="font-size: 0.82rem;">Crea Epic, Story, Task e Sub-task seguendo la struttura generata.</p>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-4">
-                    <div class="w-8 h-8 rounded-lg bg-aulab-yellow/10 border border-aulab-yellow/30 flex items-center justify-center shrink-0">
-                      <span class="text-aulab-yellow font-black" style="font-size: 0.75rem;">4</span>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                      <p class="text-white font-black uppercase" style="font-size: 0.75rem;">Avvia lo sprint</p>
-                      <p class="text-gray-400" style="font-size: 0.82rem;">Seleziona le Story per il primo sprint e dai il via.</p>
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-aulab-yellow/10 border border-aulab-yellow/30 flex items-center justify-center shrink-0">
+                        <span class="text-aulab-yellow font-black" style="font-size: 0.75rem;">4</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <p class="text-white font-black uppercase" style="font-size: 0.75rem;">Avvia lo sprint</p>
+                        <p class="text-gray-400" style="font-size: 0.82rem;">Seleziona le Story per il primo sprint e
+                          dai il via.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                <!-- Gerarchia attesa -->
+                <div class="col-span-7 glass-card flex flex-col gap-5">
+                  <h3 class="font-black uppercase">Struttura attesa in Jira</h3>
+                  <div class="flex flex-col gap-0">
+
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-bolt text-purple-400" style="font-size: 0.65rem;"></i>
+                      </div>
+                      <div class="flex-1 flex items-center gap-3 rounded-lg bg-purple-500/8 border border-purple-500/15"
+                        style="padding: 0.45rem 0.8rem;">
+                        <span class="text-purple-300 font-black uppercase" style="font-size: 0.68rem;">Epic</span>
+                        <span class="text-white/15">·</span>
+                        <span class="text-gray-500" style="font-size: 7.5pt;">2–3 grandi aree di lavoro del
+                          progetto</span>
+                      </div>
+                    </div>
+                    <div style="padding-left: 15px; height: 10px;">
+                      <div style="width: 1px; height: 100%; background: rgba(255,255,255,0.1);"></div>
+                    </div>
+
+                    <div class="flex items-center gap-3" style="padding-left: 1.5rem;">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-user text-blue-400" style="font-size: 0.65rem;"></i>
+                      </div>
+                      <div class="flex-1 flex items-center gap-3 rounded-lg bg-blue-500/8 border border-blue-500/15"
+                        style="padding: 0.45rem 0.8rem;">
+                        <span class="text-blue-300 font-black uppercase" style="font-size: 0.68rem;">Story</span>
+                        <span class="text-white/15">·</span>
+                        <span class="text-gray-500" style="font-size: 7.5pt;">3–4 user story per ogni Epic, formato
+                          "Come utente…"</span>
+                      </div>
+                    </div>
+                    <div style="padding-left: 39px; height: 10px;">
+                      <div style="width: 1px; height: 100%; background: rgba(255,255,255,0.1);"></div>
+                    </div>
+
+                    <div class="flex items-center gap-3" style="padding-left: 3rem;">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-aulab-cyan/15 border border-aulab-cyan/30 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-list-check text-aulab-cyan" style="font-size: 0.65rem;"></i>
+                      </div>
+                      <div class="flex-1 flex items-center gap-3 rounded-lg bg-aulab-cyan/8 border border-aulab-cyan/15"
+                        style="padding: 0.45rem 0.8rem;">
+                        <span class="text-aulab-cyan font-black uppercase" style="font-size: 0.68rem;">Task</span>
+                        <span class="text-white/15">·</span>
+                        <span class="text-gray-500" style="font-size: 7.5pt;">2–3 task tecnici o operativi per ogni
+                          Story</span>
+                      </div>
+                    </div>
+                    <div style="padding-left: 63px; height: 10px;">
+                      <div style="width: 1px; height: 100%; background: rgba(255,255,255,0.1);"></div>
+                    </div>
+
+                    <div class="flex items-center gap-3" style="padding-left: 4.5rem;">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-gray-500/15 border border-gray-500/30 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-circle-dot text-gray-400" style="font-size: 0.65rem;"></i>
+                      </div>
+                      <div class="flex-1 flex items-center gap-3 rounded-lg bg-white/[0.03] border border-white/8"
+                        style="padding: 0.45rem 0.8rem;">
+                        <span class="text-gray-400 font-black uppercase" style="font-size: 0.68rem;">Sub-task</span>
+                        <span class="text-white/15">·</span>
+                        <span class="text-gray-500" style="font-size: 7.5pt;">Dettaglio tecnico per i task più
+                          complessi</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="flex items-center gap-3 rounded-lg bg-aulab-yellow/5 border border-aulab-yellow/15"
+                    style="padding: 0.6rem 0.9rem;">
+                    <i class="fa-solid fa-circle-info text-aulab-yellow shrink-0" style="font-size: 0.8rem;"></i>
+                    <p class="text-gray-400" style="font-size: 0.78rem;">Assegna ogni Story a un'Epic, ogni Task alla
+                      sua Story. Assegnatario obbligatorio su ogni Task.</p>
+                  </div>
+                </div>
+
               </div>
-
-              <!-- Gerarchia attesa -->
-              <div class="col-span-7 glass-card flex flex-col gap-5">
-                <h3 class="font-black uppercase">Struttura attesa in Jira</h3>
-                <div class="flex flex-col gap-0">
-
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center shrink-0">
-                      <i class="fa-solid fa-bolt text-purple-400" style="font-size: 0.65rem;"></i>
-                    </div>
-                    <div class="flex-1 flex items-center gap-3 rounded-lg bg-purple-500/8 border border-purple-500/15" style="padding: 0.45rem 0.8rem;">
-                      <span class="text-purple-300 font-black uppercase" style="font-size: 0.68rem;">Epic</span>
-                      <span class="text-white/15">·</span>
-                      <span class="text-gray-500" style="font-size: 7.5pt;">2–3 grandi aree di lavoro del progetto</span>
-                    </div>
-                  </div>
-                  <div style="padding-left: 15px; height: 10px;"><div style="width: 1px; height: 100%; background: rgba(255,255,255,0.1);"></div></div>
-
-                  <div class="flex items-center gap-3" style="padding-left: 1.5rem;">
-                    <div class="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center shrink-0">
-                      <i class="fa-solid fa-user text-blue-400" style="font-size: 0.65rem;"></i>
-                    </div>
-                    <div class="flex-1 flex items-center gap-3 rounded-lg bg-blue-500/8 border border-blue-500/15" style="padding: 0.45rem 0.8rem;">
-                      <span class="text-blue-300 font-black uppercase" style="font-size: 0.68rem;">Story</span>
-                      <span class="text-white/15">·</span>
-                      <span class="text-gray-500" style="font-size: 7.5pt;">3–4 user story per ogni Epic, formato "Come utente…"</span>
-                    </div>
-                  </div>
-                  <div style="padding-left: 39px; height: 10px;"><div style="width: 1px; height: 100%; background: rgba(255,255,255,0.1);"></div></div>
-
-                  <div class="flex items-center gap-3" style="padding-left: 3rem;">
-                    <div class="w-8 h-8 rounded-lg bg-aulab-cyan/15 border border-aulab-cyan/30 flex items-center justify-center shrink-0">
-                      <i class="fa-solid fa-list-check text-aulab-cyan" style="font-size: 0.65rem;"></i>
-                    </div>
-                    <div class="flex-1 flex items-center gap-3 rounded-lg bg-aulab-cyan/8 border border-aulab-cyan/15" style="padding: 0.45rem 0.8rem;">
-                      <span class="text-aulab-cyan font-black uppercase" style="font-size: 0.68rem;">Task</span>
-                      <span class="text-white/15">·</span>
-                      <span class="text-gray-500" style="font-size: 7.5pt;">2–3 task tecnici o operativi per ogni Story</span>
-                    </div>
-                  </div>
-                  <div style="padding-left: 63px; height: 10px;"><div style="width: 1px; height: 100%; background: rgba(255,255,255,0.1);"></div></div>
-
-                  <div class="flex items-center gap-3" style="padding-left: 4.5rem;">
-                    <div class="w-8 h-8 rounded-lg bg-gray-500/15 border border-gray-500/30 flex items-center justify-center shrink-0">
-                      <i class="fa-solid fa-circle-dot text-gray-400" style="font-size: 0.65rem;"></i>
-                    </div>
-                    <div class="flex-1 flex items-center gap-3 rounded-lg bg-white/[0.03] border border-white/8" style="padding: 0.45rem 0.8rem;">
-                      <span class="text-gray-400 font-black uppercase" style="font-size: 0.68rem;">Sub-task</span>
-                      <span class="text-white/15">·</span>
-                      <span class="text-gray-500" style="font-size: 7.5pt;">Dettaglio tecnico per i task più complessi</span>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="flex items-center gap-3 rounded-lg bg-aulab-yellow/5 border border-aulab-yellow/15" style="padding: 0.6rem 0.9rem;">
-                  <i class="fa-solid fa-circle-info text-aulab-yellow shrink-0" style="font-size: 0.8rem;"></i>
-                  <p class="text-gray-400" style="font-size: 0.78rem;">Assegna ogni Story a un'Epic, ogni Task alla sua Story. Assegnatario obbligatorio su ogni Task.</p>
-                </div>
-              </div>
-
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
 
-      <!-- ═══════════════════════════════════════════════
+        <!-- ═══════════════════════════════════════════════
            SLIDE PROMPT CHATGPT
       ═══════════════════════════════════════════════ -->
-      <section id="slide-prompt">
-        <div class="flex flex-col h-full">
-          <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
-            <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
-              Lab.02 &mdash; Genera il Brief con ChatGPT
-            </span>
-          </div>
+        <section id="slide-prompt">
+          <div class="flex flex-col h-full">
+            <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+                Lab.02 &mdash; Genera il Brief con ChatGPT
+              </span>
+            </div>
 
-          <div class="flex-1 flex" style="align-items: stretch; min-height: 0;">
-            <div class="grid grid-cols-12 gap-5 w-full" style="min-height: 0;">
+            <div class="flex-1 flex" style="align-items: stretch; min-height: 0;">
+              <div class="grid grid-cols-12 gap-5 w-full" style="min-height: 0;">
 
-              <!-- Left col-span-4, padding ridotto -->
-              <div class="col-span-4 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-4" style="padding: 1.5rem 1.6rem !important; justify-content: space-between;">
-                <div class="flex flex-col gap-4">
-                  <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
-                      <i class="fa-solid fa-list-check text-aulab-yellow text-sm"></i>
-                    </div>
-                    <span class="text-white font-black uppercase" style="font-size: 0.72rem; letter-spacing: 0.15em;">Come usarlo</span>
-                  </div>
-                  <div class="flex flex-col gap-3">
+                <!-- Left col-span-4, padding ridotto -->
+                <div class="col-span-4 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-4"
+                  style="padding: 1.5rem 1.6rem !important; justify-content: space-between;">
+                  <div class="flex flex-col gap-4">
                     <div class="flex items-center gap-3">
-                      <span class="w-5 h-5 rounded bg-aulab-yellow/15 border border-aulab-yellow/30 flex items-center justify-center shrink-0 font-black text-aulab-yellow" style="font-size: 0.58rem; min-width: 1.25rem;">1</span>
-                      <p class="text-gray-400" style="font-size: 0.8rem;">Clicca <strong class="text-white">Copia Prompt</strong> in alto a destra.</p>
+                      <div
+                        class="w-9 h-9 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                        <i class="fa-solid fa-list-check text-aulab-yellow text-sm"></i>
+                      </div>
+                      <span class="text-white font-black uppercase"
+                        style="font-size: 0.72rem; letter-spacing: 0.15em;">Come usarlo</span>
                     </div>
+                    <div class="flex flex-col gap-3">
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="w-5 h-5 rounded bg-aulab-yellow/15 border border-aulab-yellow/30 flex items-center justify-center shrink-0 font-black text-aulab-yellow"
+                          style="font-size: 0.58rem; min-width: 1.25rem;">1</span>
+                        <p class="text-gray-400" style="font-size: 0.8rem;">Clicca <strong class="text-white">Copia
+                            Prompt</strong> in alto a destra.</p>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="w-5 h-5 rounded bg-aulab-yellow/15 border border-aulab-yellow/30 flex items-center justify-center shrink-0 font-black text-aulab-yellow"
+                          style="font-size: 0.58rem; min-width: 1.25rem;">2</span>
+                        <p class="text-gray-400" style="font-size: 0.8rem;">Incollalo su <strong
+                            class="text-white">chatgpt.com</strong> e leggi l'output.</p>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <span
+                          class="w-5 h-5 rounded bg-aulab-yellow/15 border border-aulab-yellow/30 flex items-center justify-center shrink-0 font-black text-aulab-yellow"
+                          style="font-size: 0.58rem; min-width: 1.25rem; margin-top: 2px;">3</span>
+                        <p class="text-gray-400" style="font-size: 0.8rem;">Crea <strong class="text-white">Epic, Story
+                            e Task</strong> in Jira usando il risultato.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2 rounded-xl bg-white/[0.03] border border-white/8"
+                    style="padding: 0.75rem 0.9rem;">
+                    <i class="fa-solid fa-lightbulb text-aulab-yellow shrink-0"
+                      style="font-size: 0.7rem; margin-top: 3px;"></i>
+                    <p class="text-gray-500" style="font-size: 0.73rem; line-height: 1.5;">Non usare tutto l'output:
+                      scegli le parti più utili per il tuo sprint.</p>
+                  </div>
+                </div>
+
+                <!-- Right col-span-8: prompt box -->
+                <div class="col-span-8 glass-card border-l-4 border-aulab-cyan/40 flex flex-col gap-3"
+                  style="min-height: 0;">
+                  <div class="flex items-center justify-between">
                     <div class="flex items-center gap-3">
-                      <span class="w-5 h-5 rounded bg-aulab-yellow/15 border border-aulab-yellow/30 flex items-center justify-center shrink-0 font-black text-aulab-yellow" style="font-size: 0.58rem; min-width: 1.25rem;">2</span>
-                      <p class="text-gray-400" style="font-size: 0.8rem;">Incollalo su <strong class="text-white">chatgpt.com</strong> e leggi l'output.</p>
+                      <div
+                        class="w-9 h-9 rounded-lg bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                        <i class="fa-solid fa-robot text-aulab-cyan text-sm"></i>
+                      </div>
+                      <span class="text-aulab-cyan font-black uppercase"
+                        style="font-size: 0.72rem; letter-spacing: 0.2em;">Prompt ChatGPT</span>
                     </div>
-                    <div class="flex items-start gap-3">
-                      <span class="w-5 h-5 rounded bg-aulab-yellow/15 border border-aulab-yellow/30 flex items-center justify-center shrink-0 font-black text-aulab-yellow" style="font-size: 0.58rem; min-width: 1.25rem; margin-top: 2px;">3</span>
-                      <p class="text-gray-400" style="font-size: 0.8rem;">Crea <strong class="text-white">Epic, Story e Task</strong> in Jira usando il risultato.</p>
-                    </div>
+                    <button id="copy-prompt-btn" onclick="copyJiraPrompt()"
+                      class="flex items-center gap-2 rounded-lg border border-aulab-yellow/30 bg-aulab-yellow/10 text-aulab-yellow font-black uppercase transition-all duration-200 hover:bg-aulab-yellow/20 hover:border-aulab-yellow/60"
+                      style="padding: 0.4rem 0.9rem; font-size: 0.62rem; letter-spacing: 0.15em; cursor: pointer;">
+                      <i class="fa-solid fa-copy" id="copy-icon"></i>
+                      <span id="copy-label">Copia Prompt</span>
+                    </button>
+                  </div>
+                  <div class="rounded-xl bg-black/40 border border-white/8"
+                    style="padding: 1rem 1.2rem; flex: 1; min-height: 0; overflow-y: auto;">
+                    <p id="jira-prompt-display" class="text-gray-300 leading-relaxed"
+                      style="font-size: 0.75rem; font-family: 'Courier New', monospace;">
+                      Sei il Project Manager di una startup che vuole costruire <span class="text-aulab-yellow">un'app
+                        web di food delivery locale</span> — una piattaforma che permette ai ristoranti del territorio
+                      di ricevere ordini online e gestirne la consegna a domicilio.<br><br>
+                      Devi pianificare il progetto su Jira. Presentami la struttura completa includendo:<br><br>
+                      <span class="text-white">1. Obiettivo del progetto</span> (2-3 frasi): cosa si vuole realizzare,
+                      per chi e con quale team.<br><br>
+                      <span class="text-white">2. 3 Epic</span> con nome breve e descrizione (1 frase ciascuna), che
+                      rappresentino le macro-aree di lavoro.<br><br>
+                      <span class="text-white">3. Per ogni Epic: 3 User Story</span> nel formato:<br>
+                      &nbsp;&nbsp;"Come [tipo di utente], voglio [azione], in modo da [beneficio]."<br>
+                      &nbsp;&nbsp;Aggiungi 2-3 Acceptance Criteria per ciascuna.<br><br>
+                      <span class="text-white">4. Per ogni Story: 2 Task</span> concreti e assegnabili a un membro del
+                      team.<br><br>
+                      <span class="text-white">5. Per almeno 2 Task: 1 Sub-task</span> di dettaglio operativo o
+                      tecnico.<br><br>
+                      Formatta l'output in modo gerarchico e chiaro. Il piano deve essere realistico, adatto a <span
+                        class="text-aulab-yellow">uno sprint di 2 settimane per un team di 3 persone</span>.
+                    </p>
                   </div>
                 </div>
-                <div class="flex items-start gap-2 rounded-xl bg-white/[0.03] border border-white/8" style="padding: 0.75rem 0.9rem;">
-                  <i class="fa-solid fa-lightbulb text-aulab-yellow shrink-0" style="font-size: 0.7rem; margin-top: 3px;"></i>
-                  <p class="text-gray-500" style="font-size: 0.73rem; line-height: 1.5;">Non usare tutto l'output: scegli le parti più utili per il tuo sprint.</p>
-                </div>
-              </div>
 
-              <!-- Right col-span-8: prompt box -->
-              <div class="col-span-8 glass-card border-l-4 border-aulab-cyan/40 flex flex-col gap-3" style="min-height: 0;">
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-lg bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
-                      <i class="fa-solid fa-robot text-aulab-cyan text-sm"></i>
-                    </div>
-                    <span class="text-aulab-cyan font-black uppercase" style="font-size: 0.72rem; letter-spacing: 0.2em;">Prompt ChatGPT</span>
-                  </div>
-                  <button id="copy-prompt-btn" onclick="copyJiraPrompt()" class="flex items-center gap-2 rounded-lg border border-aulab-yellow/30 bg-aulab-yellow/10 text-aulab-yellow font-black uppercase transition-all duration-200 hover:bg-aulab-yellow/20 hover:border-aulab-yellow/60" style="padding: 0.4rem 0.9rem; font-size: 0.62rem; letter-spacing: 0.15em; cursor: pointer;">
-                    <i class="fa-solid fa-copy" id="copy-icon"></i>
-                    <span id="copy-label">Copia Prompt</span>
-                  </button>
-                </div>
-                <div class="rounded-xl bg-black/40 border border-white/8" style="padding: 1rem 1.2rem; flex: 1; min-height: 0; overflow-y: auto;">
-                  <p id="jira-prompt-display" class="text-gray-300 leading-relaxed" style="font-size: 0.75rem; font-family: 'Courier New', monospace;">
-                    Sei il Project Manager di una startup che vuole costruire <span class="text-aulab-yellow">un'app web di food delivery locale</span> — una piattaforma che permette ai ristoranti del territorio di ricevere ordini online e gestirne la consegna a domicilio.<br><br>
-                    Devi pianificare il progetto su Jira. Presentami la struttura completa includendo:<br><br>
-                    <span class="text-white">1. Obiettivo del progetto</span> (2-3 frasi): cosa si vuole realizzare, per chi e con quale team.<br><br>
-                    <span class="text-white">2. 3 Epic</span> con nome breve e descrizione (1 frase ciascuna), che rappresentino le macro-aree di lavoro.<br><br>
-                    <span class="text-white">3. Per ogni Epic: 3 User Story</span> nel formato:<br>
-                    &nbsp;&nbsp;"Come [tipo di utente], voglio [azione], in modo da [beneficio]."<br>
-                    &nbsp;&nbsp;Aggiungi 2-3 Acceptance Criteria per ciascuna.<br><br>
-                    <span class="text-white">4. Per ogni Story: 2 Task</span> concreti e assegnabili a un membro del team.<br><br>
-                    <span class="text-white">5. Per almeno 2 Task: 1 Sub-task</span> di dettaglio operativo o tecnico.<br><br>
-                    Formatta l'output in modo gerarchico e chiaro. Il piano deve essere realistico, adatto a <span class="text-aulab-yellow">uno sprint di 2 settimane per un team di 3 persone</span>.
-                  </p>
-                </div>
               </div>
-
             </div>
           </div>
-        </div>
 
-        <script>
-          function copyJiraPrompt() {
-            var text = "Sei il Project Manager di una startup che vuole costruire un'app web di food delivery locale — una piattaforma che permette ai ristoranti del territorio di ricevere ordini online e gestirne la consegna a domicilio.\n\nDevi pianificare il progetto su Jira. Presentami la struttura completa includendo:\n\n1. Obiettivo del progetto (2-3 frasi): cosa si vuole realizzare, per chi e con quale team.\n\n2. 3 Epic con nome breve e descrizione (1 frase ciascuna), che rappresentino le macro-aree di lavoro.\n\n3. Per ogni Epic: 3 User Story nel formato:\n  \"Come [tipo di utente], voglio [azione], in modo da [beneficio].\"\n  Aggiungi 2-3 Acceptance Criteria per ciascuna.\n\n4. Per ogni Story: 2 Task concreti e assegnabili a un membro del team.\n\n5. Per almeno 2 Task: 1 Sub-task di dettaglio operativo o tecnico.\n\nFormatta l'output in modo gerarchico e chiaro. Il piano deve essere realistico, adatto a uno sprint di 2 settimane per un team di 3 persone.";
-            navigator.clipboard.writeText(text).then(function() {
-              var btn = document.getElementById('copy-prompt-btn');
-              var icon = document.getElementById('copy-icon');
-              var label = document.getElementById('copy-label');
-              icon.className = 'fa-solid fa-check';
-              label.textContent = 'Copiato!';
-              btn.style.borderColor = 'rgba(56,189,248,0.6)';
-              btn.style.backgroundColor = 'rgba(56,189,248,0.15)';
-              btn.style.color = '#38bdf8';
-              setTimeout(function() {
-                icon.className = 'fa-solid fa-copy';
-                label.textContent = 'Copia Prompt';
-                btn.style.borderColor = '';
-                btn.style.backgroundColor = '';
-                btn.style.color = '';
-              }, 2500);
-            });
-          }
-        </script>
-      </section>
+          <script>
+            function copyJiraPrompt() {
+              var text = "Sei il Project Manager di una startup che vuole costruire un'app web di food delivery locale — una piattaforma che permette ai ristoranti del territorio di ricevere ordini online e gestirne la consegna a domicilio.\n\nDevi pianificare il progetto su Jira. Presentami la struttura completa includendo:\n\n1. Obiettivo del progetto (2-3 frasi): cosa si vuole realizzare, per chi e con quale team.\n\n2. 3 Epic con nome breve e descrizione (1 frase ciascuna), che rappresentino le macro-aree di lavoro.\n\n3. Per ogni Epic: 3 User Story nel formato:\n  \"Come [tipo di utente], voglio [azione], in modo da [beneficio].\"\n  Aggiungi 2-3 Acceptance Criteria per ciascuna.\n\n4. Per ogni Story: 2 Task concreti e assegnabili a un membro del team.\n\n5. Per almeno 2 Task: 1 Sub-task di dettaglio operativo o tecnico.\n\nFormatta l'output in modo gerarchico e chiaro. Il piano deve essere realistico, adatto a uno sprint di 2 settimane per un team di 3 persone.";
+              navigator.clipboard.writeText(text).then(function () {
+                var btn = document.getElementById('copy-prompt-btn');
+                var icon = document.getElementById('copy-icon');
+                var label = document.getElementById('copy-label');
+                icon.className = 'fa-solid fa-check';
+                label.textContent = 'Copiato!';
+                btn.style.borderColor = 'rgba(56,189,248,0.6)';
+                btn.style.backgroundColor = 'rgba(56,189,248,0.15)';
+                btn.style.color = '#38bdf8';
+                setTimeout(function () {
+                  icon.className = 'fa-solid fa-copy';
+                  label.textContent = 'Copia Prompt';
+                  btn.style.borderColor = '';
+                  btn.style.backgroundColor = '';
+                  btn.style.color = '';
+                }, 2500);
+              });
+            }
+          </script>
+        </section>
 
       </section>
 
