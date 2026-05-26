@@ -3,8 +3,8 @@
    ============================================================ */
 :root {
   --aulab-yellow: #ffed00;
-  --aulab-cyan:   #38bdf8;
-  --dark-bg:      #0B0E14;
+  --aulab-cyan: #38bdf8;
+  --dark-bg: #0B0E14;
   --slide-padding-x: 80px;
   --slide-padding-y: 50px;
 }
@@ -12,7 +12,8 @@
 /* ============================================================
    BASE
    ============================================================ */
-html, body {
+html,
+body {
   margin: 0 !important;
   padding: 0 !important;
   background: var(--dark-bg) !important;
@@ -29,31 +30,36 @@ html, body {
 }
 
 /* ============================================================
-   SLIDE HEIGHT CHAIN
+   SLIDE HEIGHT & LAYOUT (Screen Only)
    ============================================================ */
-.reveal .slides section {
-  height: 100% !important;
-  box-sizing: border-box;
+@media screen {
+  .reveal .slides section {
+    height: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .reveal .slides section:not(:has(> section)) {
+    padding: var(--slide-padding-y) var(--slide-padding-x) !important;
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .reveal .slides section.section-divider {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .reveal .slides section.welcome-slide {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+  }
 }
 
 /* ============================================================
-   LEAF SLIDE LAYOUT
+   SECTION DIVIDER TYPOGRAPHY
    ============================================================ */
-.reveal .slides section:not(:has(> section)) {
-  padding: var(--slide-padding-y) var(--slide-padding-x) !important;
-  display: flex !important;
-  flex-direction: column;
-}
-
-/* ============================================================
-   SECTION DIVIDER
-   ============================================================ */
-.reveal .slides section.section-divider {
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center;
-}
-
 .reveal .slides section.section-divider h1 {
   font-size: 3rem !important;
   font-weight: 900 !important;
@@ -65,13 +71,8 @@ html, body {
 }
 
 /* ============================================================
-   WELCOME / CLOSING SLIDE
+   WELCOME / CLOSING SLIDE TYPOGRAPHY
    ============================================================ */
-.reveal .slides section.welcome-slide {
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center;
-}
 
 .reveal .slides section.welcome-slide h1 {
   font-size: 3.5rem !important;
